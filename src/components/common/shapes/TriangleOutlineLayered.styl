@@ -1,0 +1,26 @@
+@require '../../../styles/includes/layout'
+
+.triangleWrapper
+  display: block
+  height: 15px
+  overflow: visible
+
+.triangle
+  position: relative
+  border-color: currentColor
+  border-style: solid
+  border-width: 3px 0 0 3px
+  &:after
+    content: ''
+    position: absolute
+    width: 0
+    height: 142%
+    padding-top: 2px
+    border-style: solid
+    border-color: transparent currentColor
+    border-width: 3px 3px 3px 0
+    left: 100%
+    top: -5px
+    margin-left: 1px
+    transform-origin: top left
+    transform: rotate(45deg)

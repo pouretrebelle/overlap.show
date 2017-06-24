@@ -6,6 +6,8 @@ import { getOneOf } from 'src/utils/numberUtils';
 import SingleShape from './SingleShape';
 import Rectangle from './shapes/Rectangle';
 import RectangleOutline from './shapes/RectangleOutline';
+import Triangle from './shapes/Triangle';
+import TriangleOutlineLayered from './shapes/TriangleOutlineLayered';
 
 class ShapeField extends Component {
 
@@ -14,6 +16,8 @@ class ShapeField extends Component {
     this.availableShapes = [
       Rectangle,
       RectangleOutline,
+      Triangle,
+      TriangleOutlineLayered,
     ];
   }
 

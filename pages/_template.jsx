@@ -1,28 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../src/styles/application.styl';
 
-import PageLink from '../src/components/common/PageLink';
+const Template = ({ children }) => (children);
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      children: React.PropTypes.any,
-    };
-  },
-  render() {
-    return (
-      <div>
-        <div className='site-header'>
-          <PageLink to={'/'}>
-            <h1>
-              Barebones Starter
-            </h1>
-          </PageLink>
-        </div>
-        <div>
-          {this.props.children}
-        </div>
-      </div>
-    );
-  },
-});
+Template.propTypes = {
+  children: PropTypes.node,
+};
+
+export default Template;

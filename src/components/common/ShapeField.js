@@ -10,6 +10,7 @@ import RectangleBands from './shapes/RectangleBands';
 import Triangle from './shapes/Triangle';
 import TriangleOutlineLayered from './shapes/TriangleOutlineLayered';
 import CircleGrid from './shapes/CircleGrid';
+import LetterString from './shapes/LetterString';
 
 class ShapeField extends Component {
 
@@ -22,6 +23,8 @@ class ShapeField extends Component {
       Triangle,
       TriangleOutlineLayered,
       CircleGrid,
+      LetterString,
+      LetterString, // let's have double the letter strings
     ];
   }
 
@@ -31,7 +34,7 @@ class ShapeField extends Component {
   }
 
   render() {
-    const shapes = Array.from({ length: 15 }, (v, k) => (
+    const shapes = Array.from({ length: 20 }, (v, k) => (
       <SingleShape zIndex={k} key={k}>
         {this.getRandomShape()}
       </SingleShape>

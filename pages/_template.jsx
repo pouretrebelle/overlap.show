@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/main';
+import '../css/app.styl';
 
 import PageLink from '../components/common/PageLink';
 

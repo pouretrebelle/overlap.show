@@ -18,6 +18,8 @@
     "gatsby": "0.12.28",
     "react": "15.6.1",
     "react-helmet": "4.0.0",
-    "stylint": "1.5.9"
+    "stylint": "1.5.9",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1"
   }
 }

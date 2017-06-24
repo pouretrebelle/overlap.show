@@ -1,0 +1,23 @@
+{
+  "name": "overlap.show",
+  "version": "1.0.0",
+  "description": "Website for Goldsmiths MA Computation Arts 2017 final show",
+  "homepage": "http://overlap.show/",
+  "repository": "https://github.com/pouretrebelle/overlap.show",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve-build",
+    "lint": "stylint src && eslint --ext jsx --ext js src"
+  },
+  "author": "Charlotte Dann",
+  "license": "MIT",
+  "dependencies": {
+    "eslint": "4.1.0",
+    "eslint-plugin-react": "7.1.0",
+    "gatsby": "0.12.28",
+    "react": "15.6.1",
+    "react-helmet": "4.0.0",
+    "stylint": "1.5.9"
+  }
+}

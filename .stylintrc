@@ -1,0 +1,13 @@
+{
+  "semicolons": "never",
+  "colons": "always",
+  "brackets": "never",
+  "depthLimit": 3,
+  "efficient": false,
+  "emoji": true,
+  "indentSpaces": 2,
+  "leadingZero": false,
+  "stackedProperties": true,
+  "noImportant": true,
+  "valid": true
+}

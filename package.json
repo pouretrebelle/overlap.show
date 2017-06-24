@@ -13,6 +13,7 @@
   "author": "Charlotte Dann",
   "license": "MIT",
   "dependencies": {
+    "classnames": "^2.2.5",
     "eslint": "4.1.0",
     "eslint-plugin-react": "7.1.0",
     "gatsby": "0.12.28",

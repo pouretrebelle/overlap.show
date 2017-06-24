@@ -17,12 +17,13 @@ class SingleShape extends Component {
   }
 
   render() {
-    const { children, ...props } = this.props;
+    const { children, zIndex, ...props } = this.props;
 
     const style = {
       color: this.color,
       top: this.positionY,
       left: this.positionX,
+      zIndex: zIndex,
     };
 
     return (
@@ -35,6 +36,7 @@ class SingleShape extends Component {
 
 SingleShape.propTypes = {
   children: PropTypes.node.isRequired,
+  zIndex: PropTypes.number,
   x: PropTypes.number,
   y: PropTypes.number,
 }

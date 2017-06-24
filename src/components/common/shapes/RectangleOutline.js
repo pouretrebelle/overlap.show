@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Rectangle.styl';
+import styles from './RectangleOutline.styl';
 
 import { randomMinMax } from 'src/utils/numberUtils';
 
-class Rectangle extends Component {
+class RectangleOutline extends Component {
 
   constructor(props) {
     super(props);
@@ -25,4 +25,4 @@ class Rectangle extends Component {
   }
 }
 
-export default Rectangle;
+export default RectangleOutline;

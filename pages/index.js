@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 import { config } from 'config';
-import PageLink from '../src/components/common/PageLink';
+import ShapeField from 'src/components/common/ShapeField';
 
 const IndexPage = () => (
   <div>
@@ -19,9 +19,7 @@ const IndexPage = () => (
         },
       ]}
     />
-    <PageLink to={'/about'}>
-      About Page
-    </PageLink>
+    <ShapeField />
   </div>
 );
 

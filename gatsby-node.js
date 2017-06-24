@@ -6,7 +6,7 @@ exports.modifyWebpackConfig = function (config, stage) {
   if (stage == 'develop') {
     config.loader('css', function (cfg) {
       cfg.test = /\.styl$/;
-      cfg.loader = 'style!css?minimize&sourceMap!postcss!stylus-loader';
+      cfg.loader = 'style!css?minimize&sourceMap&modules!postcss!stylus-loader';
 
       return cfg;
     });
@@ -15,7 +15,7 @@ exports.modifyWebpackConfig = function (config, stage) {
     config.loader('styl', function (cfg) {
       cfg.test = /\.styl$/;
       cfg.loader = ExtractTextPlugin.extract([
-        'css?minimize&sourceMap',
+        'css?minimize&sourceMap&modules',
         'postcss',
         'stylus-loader',
       ]);

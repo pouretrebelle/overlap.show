@@ -6,6 +6,7 @@ import { getOneOf } from 'src/utils/numberUtils';
 import SingleShape from './SingleShape';
 import Rectangle from './shapes/Rectangle';
 import RectangleOutline from './shapes/RectangleOutline';
+import RectangleBands from './shapes/RectangleBands';
 import Triangle from './shapes/Triangle';
 import TriangleOutlineLayered from './shapes/TriangleOutlineLayered';
 import CircleGrid from './shapes/CircleGrid';
@@ -17,6 +18,7 @@ class ShapeField extends Component {
     this.availableShapes = [
       Rectangle,
       RectangleOutline,
+      RectangleBands,
       Triangle,
       TriangleOutlineLayered,
       CircleGrid,

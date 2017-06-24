@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
 import { config } from 'config';
-import PageLink from '../components/common/PageLink';
+import PageLink from '../src/components/common/PageLink';
 
 class IndexPage extends Component {
   render () {

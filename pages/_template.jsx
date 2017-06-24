@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/app.styl';
+import '../src/styles/application.styl';
 
-import PageLink from '../components/common/PageLink';
+import PageLink from '../src/components/common/PageLink';
 
 module.exports = React.createClass({
   propTypes () {

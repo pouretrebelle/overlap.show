@@ -1,0 +1,35 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+import styles from './CircleGrid.styl';
+
+import { randomZerodInt } from 'src/utils/numberUtils';
+
+const CIRCLE_SIZE = 13;
+
+class CircleGrid extends Component {
+
+  constructor(props) {
+    super(props);
+    this.width = 4+randomZerodInt(10);
+    this.height = 4+randomZerodInt(10);
+  }
+
+  render() {
+    const style = {
+      width: this.width * CIRCLE_SIZE,
+    };
+
+    const circles = Array.from({ length: this.width*this.height }, (v, k) => (
+      <div className={styles.circle} key={k}/>
+    ));
+
+    return (
+      <div style={style}>
+        {circles}
+      </div>
+    );
+  }
+}
+
+export default CircleGrid;

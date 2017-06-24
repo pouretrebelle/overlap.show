@@ -8,6 +8,7 @@ import Rectangle from './shapes/Rectangle';
 import RectangleOutline from './shapes/RectangleOutline';
 import Triangle from './shapes/Triangle';
 import TriangleOutlineLayered from './shapes/TriangleOutlineLayered';
+import CircleGrid from './shapes/CircleGrid';
 
 class ShapeField extends Component {
 
@@ -18,6 +19,7 @@ class ShapeField extends Component {
       RectangleOutline,
       Triangle,
       TriangleOutlineLayered,
+      CircleGrid,
     ];
   }
 

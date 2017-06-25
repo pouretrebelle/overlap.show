@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { observer, inject } from 'mobx-react';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import { getOneOf, randomMax } from 'src/utils/numberUtils';
 
 import ShowTitle from './ShowTitle';
-import SingleShape from './SingleShape';
+import ClusterShapes from './ClusterShapes';
 import Rectangle from './shapes/Rectangle';
 import RectangleOutline from './shapes/RectangleOutline';
 import RectangleBands from './shapes/RectangleBands';
@@ -15,6 +16,7 @@ import CircleGrid from './shapes/CircleGrid';
 import LetterString from './shapes/LetterString';
 import AnimatedLetterPair from './shapes/AnimatedLetterPair';
 
+@inject('UIStore') @observer
 class ShapeField extends Component {
 
   constructor(props) {
@@ -31,17 +33,15 @@ class ShapeField extends Component {
     ];
   }
 
-  getRandomShape = () => {
+  getRandomShape = (i) => {
     const Shape = getOneOf(this.availableShapes);
-    return <Shape/>
+    return <Shape key={i}/>
   }
 
   render() {
-    const shapes = Array.from({ length: 20 }, (v, k) => (
-      <SingleShape zIndex={k} key={k}>
-        {this.getRandomShape()}
-      </SingleShape>
-    ));
+    const { UIStore } = this.props;
+
+    const shapes = Array.from({ length: 20 }, (v, k) => this.getRandomShape(k));
     const pairs = Array.from({ length: 40 }, (v, k) => (
       <AnimatedLetterPair index={k} key={k} />
     ));
@@ -51,7 +51,11 @@ class ShapeField extends Component {
 
         <ShowTitle/>
 
-        {shapes}
+        <TransitionGroup>
+          <ClusterShapes UIStore={UIStore}>
+            {shapes}
+          </ClusterShapes>
+        </TransitionGroup>
 
         <TransitionGroup>
           {pairs}
@@ -60,6 +64,10 @@ class ShapeField extends Component {
       </div>
     );
   }
+}
+
+ShapeField.propTypes = {
+  UIStore: PropTypes.object,
 }
 
 export default ShapeField;

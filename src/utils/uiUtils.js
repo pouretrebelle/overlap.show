@@ -1,9 +1,9 @@
 import { ACCENT_COLORS } from 'src/constants/ui';
 import { randomMax } from 'src/utils/numberUtils';
 
-export const randomAccentColor = () => {
+export const randomAccentColor = (sometimesWhite) => {
   let color = ACCENT_COLORS[Math.floor(Math.random()*ACCENT_COLORS.length)]
-  if (Math.random() < 0.1) color = '#FFFFFF';
+  if (sometimesWhite && Math.random() < 0.2) color = '#FFFFFF';
   return color
 };
 

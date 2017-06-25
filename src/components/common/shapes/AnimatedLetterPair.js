@@ -78,7 +78,7 @@ class AnimatedLetterPair extends Component {
 
     return (
       <div ref={element => this.wrapperElement = element}>
-        <SingleShape zIndex={20}>
+        <SingleShape zIndex={20} sometimesWhite={true}>
           <div style={wrapperStyle} className={wrapperClasses}>
             <span ref={element => this.firstLetterElement = element} className={styles.letter}>
               {this.firstLetter}

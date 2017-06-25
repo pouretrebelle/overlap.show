@@ -9,8 +9,8 @@ class Rectangle extends Component {
 
   constructor(props) {
     super(props);
-    this.width = randomMinMax(80, 250);
-    this.height = this.width * randomMinMax(0.7, 1/0.7);
+    this.width = this.props.width || randomMinMax(80, 250);
+    this.height = this.props.height || this.width * randomMinMax(0.7, 1/0.7);
   }
 
   render() {
@@ -23,6 +23,11 @@ class Rectangle extends Component {
       <div style={style} className={styles.rectangle} />
     );
   }
+}
+
+Rectangle.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
 }
 
 export default Rectangle;

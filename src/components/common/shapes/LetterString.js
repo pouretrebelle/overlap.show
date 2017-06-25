@@ -21,7 +21,6 @@ class LetterString extends Component {
       fontSize: this.fontSize,
     };
     const wrapperClasses = classNames({
-      [styles.letterWrapper]: true,
       [styles.italic]: this.letter.italic,
       [styles.overlap]: this.letter.overlap,
       [styles.vertical]: this.letter.vertical,

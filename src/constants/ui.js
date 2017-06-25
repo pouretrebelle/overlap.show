@@ -3,6 +3,16 @@ export const ACCENT_COLORS = [
   '#555454',
 ];
 
+export const possibleLetterPairSymbols = [
+  'O',
+  'V',
+  'E',
+  'R',
+  'L',
+  'A',
+  'P',
+];
+
 export const possibleLetterStringSymbols = [
   {
     symbol: 'O',

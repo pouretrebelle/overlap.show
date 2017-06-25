@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import TransitionGroup from 'react-transition-group/TransitionGroup';
 
-import { getOneOf } from 'src/utils/numberUtils';
+import { getOneOf, randomMax } from 'src/utils/numberUtils';
 
 import SingleShape from './SingleShape';
 import Rectangle from './shapes/Rectangle';
@@ -11,7 +12,7 @@ import Triangle from './shapes/Triangle';
 import TriangleOutlineLayered from './shapes/TriangleOutlineLayered';
 import CircleGrid from './shapes/CircleGrid';
 import LetterString from './shapes/LetterString';
-import LetterPair from './shapes/LetterPair';
+import AnimatedLetterPair from './shapes/AnimatedLetterPair';
 
 class ShapeField extends Component {
 
@@ -35,21 +36,24 @@ class ShapeField extends Component {
   }
 
   render() {
-    const letterPairs = Array.from({ length: 40 }, (v, k) => (
-      <SingleShape zIndex={-1} key={k}>
-        <LetterPair/>
-      </SingleShape>
-    ));
     const shapes = Array.from({ length: 20 }, (v, k) => (
       <SingleShape zIndex={k} key={k}>
         {this.getRandomShape()}
       </SingleShape>
     ));
+    const pairs = Array.from({ length: 40 }, (v, k) => (
+      <AnimatedLetterPair index={k} key={k} />
+    ));
 
     return (
       <div>
-        {letterPairs}
+
+        <TransitionGroup>
+          {pairs}
+        </TransitionGroup>
+
         {shapes}
+
       </div>
     );
   }

@@ -17,7 +17,7 @@ class SingleShape extends Component {
   }
 
   render() {
-    const { children, zIndex, ...props } = this.props;
+    const { children, zIndex, sometimesWhite, ...props } = this.props;
 
     const style = {
       color: this.color,

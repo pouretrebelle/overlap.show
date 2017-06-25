@@ -4,6 +4,7 @@ import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import { getOneOf, randomMax } from 'src/utils/numberUtils';
 
+import ShowTitle from './ShowTitle';
 import SingleShape from './SingleShape';
 import Rectangle from './shapes/Rectangle';
 import RectangleOutline from './shapes/RectangleOutline';
@@ -48,11 +49,13 @@ class ShapeField extends Component {
     return (
       <div>
 
+        <ShowTitle/>
+
+        {shapes}
+
         <TransitionGroup>
           {pairs}
         </TransitionGroup>
-
-        {shapes}
 
       </div>
     );

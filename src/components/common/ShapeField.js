@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
-import { getOneOf, randomMax } from 'src/utils/numberUtils';
+import { getOneOf } from 'src/utils/numberUtils';
 
 import ShowTitle from './ShowTitle';
 import ClusterShapes from './ClusterShapes';
@@ -35,7 +35,8 @@ class ShapeField extends Component {
 
   getRandomShape = (i) => {
     const Shape = getOneOf(this.availableShapes);
-    return <Shape key={i}/>
+
+    return <Shape key={i}/>;
   }
 
   render() {
@@ -68,6 +69,6 @@ class ShapeField extends Component {
 
 ShapeField.propTypes = {
   UIStore: PropTypes.object,
-}
+};
 
 export default ShapeField;

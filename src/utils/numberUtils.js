@@ -12,4 +12,4 @@ export const randomZerodInt = (max) => (
 
 export const getOneOf = (list) => (
   list[randomZerodInt(list.length)]
-)
+);

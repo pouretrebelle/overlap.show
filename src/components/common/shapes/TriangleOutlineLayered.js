@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 
 import styles from './TriangleOutlineLayered.styl';
 
@@ -26,7 +24,7 @@ class TriangleOutlineLayered extends Component {
         <div style={style} className={styles.triangle}/>
       </div>
     ));
-    
+
     return (
       <div className={styles[`rotate${this.rotation}`]}>
         {triangles}

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import styles from './LetterString.styl';
@@ -25,7 +24,7 @@ class LetterString extends Component {
       [styles.overlap]: this.letter.overlap,
       [styles.vertical]: this.letter.vertical,
       [styles.bold]: this.letter.bold,
-    })
+    });
 
     const letters = Array.from({ length: this.letterCount }, (v, k) => (
       <span key={k}>{this.letter.symbol}</span>

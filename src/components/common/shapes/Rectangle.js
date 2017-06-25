@@ -28,6 +28,6 @@ class Rectangle extends Component {
 Rectangle.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
-}
+};
 
 export default Rectangle;

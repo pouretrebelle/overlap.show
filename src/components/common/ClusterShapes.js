@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import TransitionGroup from 'react-transition-group/TransitionGroup';
 import TweenLite from 'gsap';
 
 import styles from './ClusterShapes.styl';
@@ -38,7 +37,7 @@ class ClusterShapes extends Component {
     // make array of shapes
     // generate random position
     // setup ref to wrapper element
-    this.shapes = this.props.children.map((child, i) => {
+    this.shapes = this.props.children.map(child => {
       return {
         shape: child,
         position: getRandomPosition(store),
@@ -60,7 +59,7 @@ class ClusterShapes extends Component {
         },
       },
       element: undefined,
-    })
+    });
   }
 
   fadeIn = (callback) => {
@@ -82,7 +81,7 @@ class ClusterShapes extends Component {
             callback();
           },
         },
-      )
+      );
     });
   }
 
@@ -95,7 +94,7 @@ class ClusterShapes extends Component {
   }
 
   render() {
-    const { children, UIStore, ...props } = this.props;
+    const { children, UIStore, ...props } = this.props; // eslint-disable-line no-unused-vars
 
     const shapes = this.shapes.map((child, i) => (
       <div
@@ -124,6 +123,6 @@ class ClusterShapes extends Component {
 ClusterShapes.propTypes = {
   children: PropTypes.node.isRequired,
   UIStore: PropTypes.object,
-}
+};
 
 export default ClusterShapes;

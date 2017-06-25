@@ -17,7 +17,7 @@ class SingleShape extends Component {
   }
 
   render() {
-    const { children, zIndex, sometimesWhite, ...props } = this.props;
+    const { children, zIndex, sometimesWhite, ...props } = this.props; // eslint-disable-line no-unused-vars
 
     const style = {
       color: this.color,
@@ -40,11 +40,11 @@ SingleShape.propTypes = {
   sometimesWhite: PropTypes.bool,
   x: PropTypes.oneOfType([
     PropTypes.number,
-    PropTypes.string
+    PropTypes.string,
   ]),
   y: PropTypes.oneOfType([
     PropTypes.number,
-    PropTypes.string
+    PropTypes.string,
   ]),
 };
 

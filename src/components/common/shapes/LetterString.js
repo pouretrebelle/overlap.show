@@ -11,17 +11,19 @@ class LetterString extends Component {
   constructor(props) {
     super(props);
     this.letterCount = 5 + randomZerodInt(20);
-    this.fontSize = randomMinMax(25, 60);
+    this.fontSize = randomMinMax(25, 80);
     this.letter = getOneOf(possibleLetterStringSymbols);
   }
 
   render() {
     const wrapperStyle = {
       fontSize: this.fontSize,
+      lineHeight: this.letter.lineHeight || '',
+      letterSpacing: this.letter.letterSpacing || '',
     };
     const wrapperClasses = classNames({
+      [styles.overlap]: true,
       [styles.italic]: this.letter.italic,
-      [styles.overlap]: this.letter.overlap,
       [styles.vertical]: this.letter.vertical,
       [styles.bold]: this.letter.bold,
     });

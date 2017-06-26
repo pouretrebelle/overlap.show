@@ -34,6 +34,7 @@ class ShapeField extends Component {
       CircleGrid,
       LetterString,
       LetterString, // let's have double the letter strings
+      LetterString, // scratch that, triple
     ];
   }
 

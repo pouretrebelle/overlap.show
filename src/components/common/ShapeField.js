@@ -36,6 +36,10 @@ class ShapeField extends Component {
       LetterString, // let's have double the letter strings
       LetterString, // scratch that, triple
     ];
+
+    // use screen size to decide quantity of components
+    this.shapeQuantity = 5 + Math.floor(this.props.UIStore.windowMin * 0.02);
+    this.pairQuantity = 10 + Math.floor(this.props.UIStore.windowMin * 0.05);
   }
 
   getRandomShape = (i) => {
@@ -46,9 +50,8 @@ class ShapeField extends Component {
 
   render() {
     const { UIStore } = this.props;
-
-    const shapes = Array.from({ length: 20 }, (v, k) => this.getRandomShape(k));
-    const pairs = Array.from({ length: 40 }, (v, k) => (
+    const shapes = Array.from({ length: this.shapeQuantity }, (v, k) => this.getRandomShape(k));
+    const pairs = Array.from({ length: this.pairQuantity }, (v, k) => (
       <AnimatedLetterPair index={k} key={k} />
     ));
 

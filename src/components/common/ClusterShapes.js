@@ -46,8 +46,10 @@ class ClusterShapes extends Component {
     });
 
     // add underlying rectangle so title is definitely visible
+    const underlayWidth = (store.windowWidth < 550) ? store.windowWidth : store.windowMin * 0.7;
+    const underlayHeight = (store.windowWidth < 550) ? store.windowWidth*0.1 : store.windowMin * 0.05;
     this.shapes.push({
-      shape: (<Rectangle width={store.windowMin*0.7} height={store.windowMin*0.05}/>),
+      shape: (<Rectangle width={underlayWidth} height={underlayHeight}/>),
       position: {
         start: {
           x: 0.2 + randomMinMax(-0.3, 0.3),

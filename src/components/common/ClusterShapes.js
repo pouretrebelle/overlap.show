@@ -50,7 +50,7 @@ class ClusterShapes extends Component {
       shape: (<Rectangle width={store.windowMin*0.7} height={store.windowMin*0.05}/>),
       position: {
         start: {
-          x: store.windowWidth / 2,
+          x: store.windowWidth / 2 + randomMinMax(-store.windowWidth*0.3, store.windowWidth*0.3),
           y: store.windowHeight / 2,
         },
         end: {

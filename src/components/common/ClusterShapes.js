@@ -62,8 +62,13 @@ class ClusterShapes extends Component {
       },
       element: undefined,
     });
+  }
 
+  componentDidMount() {
     window.addEventListener('resize', this.onWindowResized);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onWindowResized);
   }
 
   fadeIn = (callback) => {

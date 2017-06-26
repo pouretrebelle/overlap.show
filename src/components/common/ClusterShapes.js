@@ -13,12 +13,12 @@ const ANIMATION_DURATION = 1;
 const ANIMATION_INITIAL_DELAY = 2;
 
 const getRandomPosition = (store) => {
-  const x = randomMax(store.windowWidth);
-  const y = store.windowHeight / 2 + randomMinMax(-150, 150);
+  const x = Math.random();
+  const y = 0.5 + randomMinMax(-150/store.windowHeight, 150/store.windowHeight);
 
   return {
     start: {
-      x: x + (x - store.windowWidth/2),
+      x: x + (x - 0.5),
       y: y,// + (y - store.windowHeight/2),
     },
     end: {
@@ -50,32 +50,36 @@ class ClusterShapes extends Component {
       shape: (<Rectangle width={store.windowMin*0.7} height={store.windowMin*0.05}/>),
       position: {
         start: {
-          x: store.windowWidth / 2 + randomMinMax(-store.windowWidth*0.3, store.windowWidth*0.3),
-          y: store.windowHeight / 2,
+          x: 0.2 + randomMinMax(-0.3, 0.3),
+          y: 0.5,
         },
         end: {
-          x: store.windowWidth / 2,
-          y: store.windowHeight / 2,
+          x: 0.5,
+          y: 0.5,
         },
       },
       element: undefined,
     });
+
+    window.addEventListener('resize', this.onWindowResized);
   }
 
   fadeIn = (callback) => {
+    const store = this.props.UIStore;
+
     this.shapes.forEach((item, i) => {
       TweenLite.fromTo(
         item.element,
         ANIMATION_DURATION,
         {
           opacity: 0,
-          x: item.position.start.x,
-          y: item.position.start.y,
+          x: item.position.start.x * store.windowWidth,
+          y: item.position.start.y * store.windowHeight,
         },
         {
           opacity: 1,
-          x: item.position.end.x,
-          y: item.position.end.y,
+          x: item.position.end.x * store.windowWidth,
+          y: item.position.end.y * store.windowHeight,
           delay: ANIMATION_INITIAL_DELAY + i * ANIMATION_DELAY_BETWEEN_REVEALS,
           onComplete: () => {
             callback();
@@ -91,6 +95,20 @@ class ClusterShapes extends Component {
 
   componentWillEnter(callback) {
     this.fadeIn(callback);
+  }
+
+  onWindowResized = () => {
+    const store = this.props.UIStore;
+
+    this.shapes.forEach((item) => {
+      TweenLite.set(
+        item.element,
+        {
+          x: item.position.end.x * store.windowWidth,
+          y: item.position.end.y * store.windowHeight,
+        },
+      );
+    });
   }
 
   render() {

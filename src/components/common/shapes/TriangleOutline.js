@@ -33,7 +33,7 @@ class TriangleOutline extends Component {
 
 TriangleOutline.propTypes = {
   size: PropTypes.number,
-  rotation: PropTypes.rotation,
+  rotation: PropTypes.number,
 };
 
 export default TriangleOutline;

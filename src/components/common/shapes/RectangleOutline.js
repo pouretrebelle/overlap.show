@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './RectangleOutline.styl';
 
@@ -8,8 +9,8 @@ class RectangleOutline extends Component {
 
   constructor(props) {
     super(props);
-    this.width = randomMinMax(80, 250);
-    this.height = this.width * randomMinMax(0.7, 1/0.7);
+    this.width = this.props.width || randomMinMax(80, 250);
+    this.height = this.props.height || this.width * randomMinMax(0.7, 1/0.7);
   }
 
   render() {
@@ -23,5 +24,10 @@ class RectangleOutline extends Component {
     );
   }
 }
+
+RectangleOutline.propTypes = {
+  width: PropTypes.number,
+  height: PropTypes.number,
+};
 
 export default RectangleOutline;

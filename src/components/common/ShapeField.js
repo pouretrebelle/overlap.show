@@ -9,9 +9,10 @@ import ShowTitle from './ShowTitle';
 import ClusterShapes from './ClusterShapes';
 import Rectangle from './shapes/Rectangle';
 import RectangleOutline from './shapes/RectangleOutline';
-import RectangleBands from './shapes/RectangleBands';
+import RectangleStack from './shapes/RectangleStack';
 import Triangle from './shapes/Triangle';
-import TriangleOutlineLayered from './shapes/TriangleOutlineLayered';
+import TriangleOutline from './shapes/TriangleOutline';
+import TriangleStack from './shapes/TriangleStack';
 import CircleGrid from './shapes/CircleGrid';
 import LetterString from './shapes/LetterString';
 import AnimatedLetterPair from './shapes/AnimatedLetterPair';
@@ -24,9 +25,10 @@ class ShapeField extends Component {
     this.availableShapes = [
       Rectangle,
       RectangleOutline,
-      RectangleBands,
+      RectangleStack,
       Triangle,
-      TriangleOutlineLayered,
+      TriangleOutline,
+      TriangleStack,
       CircleGrid,
       LetterString,
       LetterString, // let's have double the letter strings

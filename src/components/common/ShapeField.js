@@ -10,6 +10,7 @@ import ClusterShapes from './ClusterShapes';
 import Rectangle from './shapes/Rectangle';
 import RectangleOutline from './shapes/RectangleOutline';
 import RectangleStack from './shapes/RectangleStack';
+import RectangleDiagStack from './shapes/RectangleDiagStack';
 import Triangle from './shapes/Triangle';
 import TriangleOutline from './shapes/TriangleOutline';
 import TriangleStack from './shapes/TriangleStack';
@@ -26,6 +27,7 @@ class ShapeField extends Component {
       Rectangle,
       RectangleOutline,
       RectangleStack,
+      RectangleDiagStack,
       Triangle,
       TriangleOutline,
       TriangleStack,

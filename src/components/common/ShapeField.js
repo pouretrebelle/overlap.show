@@ -38,7 +38,7 @@ class ShapeField extends Component {
     ];
 
     // use screen size to decide quantity of components
-    this.shapeQuantity = 5 + Math.floor(this.props.UIStore.windowMin * 0.02);
+    this.shapeQuantity = 5 + Math.floor(this.props.UIStore.windowMin * 0.03);
     this.pairQuantity = 10 + Math.floor(this.props.UIStore.windowMin * 0.05);
   }
 

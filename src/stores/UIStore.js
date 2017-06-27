@@ -6,6 +6,8 @@ class UIStore {
   @observable windowWidth = 0;
   @observable windowHeight = 0;
   @observable windowMin = 0;
+  @observable mouseX = 0;
+  @observable mouseY = 0;
 
   constructor() {
     if (typeof window !== 'undefined') {
@@ -16,6 +18,7 @@ class UIStore {
 
   createListeners() {
     window.addEventListener('resize', this.onWindowResized);
+    window.addEventListener('mousemove', this.onMouseMoved);
   }
 
   @action
@@ -29,11 +32,19 @@ class UIStore {
     this.windowMin = (this.windowWidth < this.windowHeight) ? this.windowWidth : this.windowHeight;
   }
 
+  @action
+  updateMousePosition = (e) => {
+    this.mouseX = e.pageX;
+    this.mouseY = e.pageY;
+  }
+
   onWindowResized = debounce(() => {
     if (!this.resizeTimer) {
       this.resizeTimer = setTimeout(this.updateDimensions, 20);
     }
   }, 100)
+
+  onMouseMoved = (e) => this.updateMousePosition(e);
 }
 
 export default UIStore;

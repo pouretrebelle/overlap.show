@@ -8,17 +8,20 @@ class UIStore {
   @observable windowMin = 0;
   @observable mouseX = 0;
   @observable mouseY = 0;
+  @observable scrollTop = 0;
 
   constructor() {
     if (typeof window !== 'undefined') {
       this.createListeners();
       this.updateDimensions();
+      this.updateScrollTop();
     }
   }
 
   createListeners() {
     window.addEventListener('resize', this.onWindowResized);
     window.addEventListener('mousemove', this.onMouseMoved);
+    window.addEventListener('scroll', this.onWindowScrolled);
   }
 
   @action
@@ -33,6 +36,11 @@ class UIStore {
   }
 
   @action
+  updateScrollTop = () => {
+    this.scrollTop = window.pageYOffset;
+  }
+
+  @action
   updateMousePosition = (e) => {
     this.mouseX = e.pageX;
     this.mouseY = e.pageY;
@@ -43,7 +51,7 @@ class UIStore {
       this.resizeTimer = setTimeout(this.updateDimensions, 20);
     }
   }, 100)
-
+  onWindowScrolled = () => this.updateScrollTop();
   onMouseMoved = (e) => this.updateMousePosition(e);
 }
 

@@ -3,9 +3,11 @@
 @require 'vendor/normalize'
 @require 'variables/colors'
 @require 'variables/typography'
+@require 'mixins/typography'
 
 html
-  font-size: 100%
+  font-size: 16px
+  line-height: 1.5
 
 body
   padding: 0
@@ -15,7 +17,6 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   background: color-background
-  padding-bottom: 200vh
   overflow-x: hidden
 
 a
@@ -31,3 +32,34 @@ a
 ::selection
   color: color-background
   background: color-secondary
+
+h1
+  header-large()
+  font-weight: font-weight-heavy
+  color: color-primary
+  margin: 0 0 2rem
+
+h2
+  header-medium()
+  font-weight: font-weight-heavy
+  color: color-primary
+  margin: 0 0 2rem
+
+h3
+  header-small()
+  font-weight: font-weight-heavy
+  color: color-secondary
+  margin: 0 0 2rem
+
+p
+  body-text()
+  font-weight: font-weight-light
+  color: color-secondary
+  margin: 0 0 1rem
+
+iframe,
+embed,
+video,
+img
+  width: 100%
+  vertical-align: bottom

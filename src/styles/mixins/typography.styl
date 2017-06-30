@@ -1,0 +1,32 @@
+@require '../variables/breakpoints'
+
+body-text()
+  font-size: 18px
+  line-height: 24px
+  @media site-small-min
+    font-size: 24px
+    line-height: 32px
+
+header-large()
+  font-size: 48px
+  line-height: 56px
+  text-transform: uppercase
+  @media site-small-min
+    font-size: 72px
+    line-height: 66px
+
+header-medium()
+  font-size: 32px
+  line-height: 40px
+  text-transform: uppercase
+  @media site-small-min
+    font-size: 48px
+    line-height: 56px
+
+header-small()
+  font-size: 24px
+  line-height: 32px
+  text-transform: uppercase
+  @media site-small-min
+    font-size: 32px
+    line-height: 40px

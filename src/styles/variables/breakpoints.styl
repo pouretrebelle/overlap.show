@@ -1,1 +1,11 @@
-site-small-min = '(min-width: 550px)'
+site-small-bp = 544px // small grid
+site-small-min = '(min-width: ' + site-small-bp + ')'
+site-small-max = '(max-width: ' + (site-small-bp - 1) + ')'
+
+site-medium-bp = 850px // tablet
+site-medium-min = '(min-width: ' + site-medium-bp + ')'
+site-medium-max = '(max-width: ' + (site-small-bp - 1) + ')'
+
+site-large-bp = 1176px // full grid
+site-large-min = '(min-width: ' + site-large-bp + ')'
+site-large-max = '(max-width: ' + (site-small-bp - 1) + ')'

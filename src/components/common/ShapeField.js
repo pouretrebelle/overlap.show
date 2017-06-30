@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
-import { getOneOf } from 'src/utils/numberUtils';
+import styles from './ShapeField.styl';
 
+import { getOneOf } from 'src/utils/numberUtils';
 import ShowTitle from './ShowTitle';
 import ClusterShapes from './ClusterShapes';
 import Rectangle from './shapes/Rectangle';
@@ -38,7 +39,7 @@ class ShapeField extends Component {
     ];
 
     // use screen size to decide quantity of components
-    this.shapeQuantity = 5 + Math.floor(this.props.UIStore.windowMin * 0.03);
+    this.shapeQuantity = 5 + Math.floor(this.props.UIStore.windowMin * 0.02);
     this.pairQuantity = 10 + Math.floor(this.props.UIStore.windowMin * 0.05);
   }
 
@@ -56,7 +57,7 @@ class ShapeField extends Component {
     ));
 
     return (
-      <div>
+      <div className={styles.wrapper}>
 
         <ShowTitle/>
 

@@ -17,17 +17,17 @@ class SingleShape extends Component {
   }
 
   render() {
-    const { children, zIndex, sometimesWhite, ...props } = this.props; // eslint-disable-line no-unused-vars
+    const { children, zIndex, sometimesWhite, style, ...props } = this.props; // eslint-disable-line no-unused-vars
 
-    const style = {
+    const mergedStyle = Object.assign((style || {}), {
       color: this.color,
       top: this.positionY,
       left: this.positionX,
       zIndex: zIndex,
-    };
+    });
 
     return (
-      <figure style={style} className={styles.shape} {...props}>
+      <figure style={mergedStyle} className={styles.shape} {...props}>
         {children}
       </figure>
     );
@@ -38,6 +38,7 @@ SingleShape.propTypes = {
   children: PropTypes.node.isRequired,
   zIndex: PropTypes.number,
   sometimesWhite: PropTypes.bool,
+  style: PropTypes.object,
   x: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string,

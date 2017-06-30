@@ -1,0 +1,48 @@
+@require '../../styles/variables/colors'
+@require '../../styles/variables/breakpoints'
+@require '../../styles/variables/typography'
+@require '../../styles/mixins/grid'
+@require '../../styles/mixins/typography'
+
+.wrapper
+  grid()
+  align-items: flex-start
+  margin-bottom: 3rem
+  @media site-small-min
+    margin-bottom: 5rem
+
+.title
+  header-large()
+  grid-cell(12)
+  @media site-small-min
+    grid-cell(4)
+  @media site-medium-min
+    grid-cell(4, 2, 0)
+
+.content
+  grid-cell(12)
+  @media site-small-min
+    grid-cell(7, 0, 1)
+  @media site-medium-min
+    grid-cell(5, 0, 1)
+
+.emphasis
+  color: color-primary
+  font-style: normal
+
+.footnote
+  display: block
+  margin-top: 0.5rem
+  font-size: 1rem
+  text-transform: uppercase
+  font-style: italic
+  line-height: 1rem
+
+.subtitle
+  margin-bottom: 1rem
+
+.openingHours
+  body-text()
+  list-style: none
+  padding: 0
+  margin: 0 0 2rem

@@ -12,7 +12,7 @@ import {
   SHAPE_ANIM_INITIAL_DELAY,
 } from 'src/constants/animation';
 
-class AnimatedTitle extends Component {
+class TitleWrapper extends Component {
 
   constructor(props) {
     super(props);
@@ -48,7 +48,7 @@ class AnimatedTitle extends Component {
     const store = this.props.UIStore;
 
     this.positionY = {
-      start: store.windowHeight * 0.5,
+      start: this.props.isAnimated ? store.windowHeight * 0.5: store.windowHeight * 0.025,
       end: store.windowHeight * 0.025,
     };
   }
@@ -73,11 +73,11 @@ class AnimatedTitle extends Component {
   }
 
   componentWillAppear(callback) {
-    if (this.props.shapeCount) this.fadeIn(callback);
+    if (this.props.shapeCount && this.props.isAnimated) this.fadeIn(callback);
   }
 
   componentWillEnter(callback) {
-    if (this.props.shapeCount) this.fadeIn(callback);
+    if (this.props.shapeCount && this.props.isAnimated) this.fadeIn(callback);
   }
 
   onWindowResized = () => {
@@ -89,7 +89,7 @@ class AnimatedTitle extends Component {
     const through = clamp(store.scrollTop / store.windowHeight, 0, 1);
 
     // don't animate if nothing's changed
-    if (through == this.currentThrough) return;
+    if (through == this.currentThrough || !this.props.isAnimated) return;
     this.currentThrough = through;
 
     TweenLite.set(
@@ -111,10 +111,15 @@ class AnimatedTitle extends Component {
   }
 }
 
-AnimatedTitle.propTypes = {
+TitleWrapper.propTypes = {
   children: PropTypes.node,
   UIStore: PropTypes.object,
   shapeCount: PropTypes.number,
+  isAnimated: PropTypes.bool,
 };
 
-export default AnimatedTitle;
+TitleWrapper.defaultProps = {
+  isAnimated: true,
+};
+
+export default TitleWrapper;

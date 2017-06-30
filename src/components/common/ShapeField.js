@@ -6,7 +6,7 @@ import TransitionGroup from 'react-transition-group/TransitionGroup';
 import styles from './ShapeField.styl';
 
 import { getOneOf } from 'src/utils/numberUtils';
-import AnimatedTitle from './PageTitle/AnimatedTitle';
+import TitleWrapper from './PageTitle/TitleWrapper';
 import PageTitle from './PageTitle';
 import Underlay from './PageTitle/Underlay';
 import ClusterShapes from './ClusterShapes';
@@ -63,9 +63,9 @@ class ShapeField extends Component {
 
         <TransitionGroup>
 
-          <AnimatedTitle UIStore={UIStore} shapeCount={this.shapeCount}>
+          <TitleWrapper UIStore={UIStore} shapeCount={this.shapeCount}>
             <Underlay />
-          </AnimatedTitle>
+          </TitleWrapper>
 
           <ClusterShapes UIStore={UIStore}>
             {shapes}
@@ -73,9 +73,9 @@ class ShapeField extends Component {
 
           {pairs}
 
-          <AnimatedTitle UIStore={UIStore}>
+          <TitleWrapper UIStore={UIStore}>
             <PageTitle/>
-          </AnimatedTitle>
+          </TitleWrapper>
 
         </TransitionGroup>
 

@@ -1,0 +1,28 @@
+@require '../../../styles/variables/breakpoints'
+
+.fixed
+  position: fixed
+  left: 50%
+
+.title,
+.underlay
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 25vw
+  line-height: 10vw
+  @media site-small-min
+    font-size: 15vmin
+    line-height: 5vmin
+
+.title
+  margin: 0
+  z-index: 40
+  color: #FFFFFF
+
+.underlay
+  width: 5em
+  height: 0.35em
+  z-index: -1
+  background: currentColor

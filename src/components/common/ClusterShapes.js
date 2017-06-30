@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TweenLite from 'gsap';
-import TweenMax from 'gsap';
 
 import styles from './ClusterShapes.styl';
 
 import { randomMinMax } from 'src/utils/numberUtils';
 import SingleShape from './SingleShape';
-import Rectangle from './shapes/Rectangle';
 
-const ANIMATION_DELAY_BETWEEN_REVEALS = 0.1;
-const ANIMATION_DURATION = 1;
-const ANIMATION_INITIAL_DELAY = 2;
-const ANIMATION_BREAKPOINT = 550;
+import {
+  SHAPE_ANIM_DELAY_BETWEEN_REVEALS,
+  SHAPE_ANIM_DURATION,
+  SHAPE_ANIM_INITIAL_DELAY,
+  ANIMATION_BREAKPOINT,
+} from 'src/constants/animation';
 
 const getRandomPosition = () => {
   const x = randomMinMax(0.1, 0.9);
@@ -34,8 +34,6 @@ class ClusterShapes extends Component {
 
   constructor(props) {
     super(props);
-    const store = this.props.UIStore;
-
     // make array of shapes
     // generate random position
     // setup ref to wrapper element
@@ -46,26 +44,6 @@ class ClusterShapes extends Component {
         element: undefined,
         initialAnimationComplete: false,
       };
-    });
-
-    // add underlying rectangle so title is definitely visible
-    const underlayWidth = (store.windowWidth < ANIMATION_BREAKPOINT) ? store.windowWidth : store.windowMin * 0.7;
-    const underlayHeight = (store.windowWidth < ANIMATION_BREAKPOINT) ? store.windowWidth*0.1 : store.windowMin * 0.05;
-    this.shapes.push({
-      underlay: true,
-      shape: (<Rectangle width={underlayWidth} height={underlayHeight}/>),
-      position: {
-        start: {
-          x: 0.2 + randomMinMax(-0.3, 0.3),
-          y: 0.5,
-        },
-        end: {
-          x: 0.5,
-          y: 0.5,
-        },
-      },
-      element: undefined,
-      initialAnimationComplete: false,
     });
   }
 
@@ -86,7 +64,7 @@ class ClusterShapes extends Component {
     this.shapes.forEach((item, i) => {
       TweenLite.fromTo(
         item.element,
-        ANIMATION_DURATION,
+        SHAPE_ANIM_DURATION,
         {
           opacity: 0,
           x: item.position.start.x * store.windowWidth,
@@ -96,7 +74,7 @@ class ClusterShapes extends Component {
           opacity: 1,
           x: item.position.end.x * store.windowWidth,
           y: item.position.end.y * store.windowHeight,
-          delay: ANIMATION_INITIAL_DELAY + i * ANIMATION_DELAY_BETWEEN_REVEALS,
+          delay: SHAPE_ANIM_INITIAL_DELAY + i * SHAPE_ANIM_DELAY_BETWEEN_REVEALS,
           onComplete: () => {
             item.initialAnimationComplete = true;
             callback();
@@ -114,6 +92,27 @@ class ClusterShapes extends Component {
     this.fadeIn(callback);
   }
 
+  getPositionX = (item, store, i) => (
+    (store.windowWidth > ANIMATION_BREAKPOINT && i) ?
+      (item.position.end.x * store.windowWidth + (store.mouseX - store.windowWidth * 0.5) * 0.002 * Math.pow((this.shapes.length - i + 1), 1.5))
+      :
+      (item.position.end.x * store.windowWidth)
+  );
+
+  getPositionY = (item, store, i) => (
+    (store.windowWidth > ANIMATION_BREAKPOINT && i) ?
+      (item.position.end.y * store.windowHeight - (store.scrollTop) * 0.01 * (this.shapes.length - i + 1))
+      :
+      (item.position.end.y * store.windowHeight)
+  );
+
+  getCurrentPosition = (item, store, i) => (
+    {
+      x: this.getPositionX(item, store, i),
+      y: this.getPositionY(item, store, i),
+    }
+  )
+
   onWindowResized = () => {
     this.shapes.forEach((item) => {
       TweenLite.set(
@@ -121,19 +120,6 @@ class ClusterShapes extends Component {
         this.getCurrentPosition(item, this.props.UIStore),
       );
     });
-  }
-
-  getCurrentPosition = (item, store, i) => {
-    let pos = {
-      x: item.position.end.x * store.windowWidth,
-      y: item.position.end.y * store.windowHeight,
-    };
-    if (store.windowWidth > ANIMATION_BREAKPOINT && i) {
-      pos.x += (store.mouseX - store.windowWidth * 0.5) * 0.002 * Math.pow((this.shapes.length - i + 1), 1.5);
-      pos.y -= - (store.scrollTop) * 0.01 * (this.shapes.length - i + 1);
-    }
-
-    return pos;
   }
 
   onMouseMoved = () => {
@@ -144,10 +130,12 @@ class ClusterShapes extends Component {
       // only jump into mouse position after initial animation
       if (!item.initialAnimationComplete) return;
 
-      TweenMax.to(
+      TweenLite.to(
         item.element,
         1,
-        this.getCurrentPosition(item, store, i),
+        {
+          x: this.getPositionX(item, this.props.UIStore, i),
+        },
       );
     });
   }
@@ -158,12 +146,13 @@ class ClusterShapes extends Component {
 
     this.shapes.forEach((item, i) => {
       // only jump into mouse position after initial animation
-      if (!item.initialAnimationComplete || item.underlay) return;
+      if (!item.initialAnimationComplete) return;
 
-      TweenMax.to(
+      TweenLite.set(
         item.element,
-        0.2,
-        this.getCurrentPosition(item, this.props.UIStore, i),
+        {
+          y: this.getPositionY(item, this.props.UIStore, i),
+        },
       );
     });
   }

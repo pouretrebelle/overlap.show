@@ -1,13 +1,13 @@
 import React from 'react';
 
-import styles from './ShowTitle.styl';
+import styles from './PageTitle.styl';
 
 import { config } from 'config';
 
-const ShowTitle = () => (
+const PageTitle = () => (
   <h1 className={styles.title}>
     {config.siteTitle}
   </h1>
 );
 
-export default ShowTitle;
+export default PageTitle;

@@ -1,0 +1,5 @@
+export const SHAPE_ANIM_DELAY_BETWEEN_REVEALS = 0.1;
+export const SHAPE_ANIM_DURATION = 1;
+export const SHAPE_ANIM_INITIAL_DELAY = 2;
+
+export const ANIMATION_BREAKPOINT = 550;

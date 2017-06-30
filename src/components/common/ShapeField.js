@@ -6,7 +6,9 @@ import TransitionGroup from 'react-transition-group/TransitionGroup';
 import styles from './ShapeField.styl';
 
 import { getOneOf } from 'src/utils/numberUtils';
-import ShowTitle from './ShowTitle';
+import AnimatedTitle from './PageTitle/AnimatedTitle';
+import PageTitle from './PageTitle';
+import Underlay from './PageTitle/Underlay';
 import ClusterShapes from './ClusterShapes';
 import Rectangle from './shapes/Rectangle';
 import RectangleOutline from './shapes/RectangleOutline';
@@ -39,8 +41,8 @@ class ShapeField extends Component {
     ];
 
     // use screen size to decide quantity of components
-    this.shapeQuantity = 5 + Math.floor(this.props.UIStore.windowMin * 0.02);
-    this.pairQuantity = 10 + Math.floor(this.props.UIStore.windowMin * 0.05);
+    this.shapeCount = 5 + Math.floor(this.props.UIStore.windowMin * 0.02);
+    this.pairCount = 10 + Math.floor(this.props.UIStore.windowMin * 0.05);
   }
 
   getRandomShape = (i) => {
@@ -51,24 +53,30 @@ class ShapeField extends Component {
 
   render() {
     const { UIStore } = this.props;
-    const shapes = Array.from({ length: this.shapeQuantity }, (v, k) => this.getRandomShape(k));
-    const pairs = Array.from({ length: this.pairQuantity }, (v, k) => (
+    const shapes = Array.from({ length: this.shapeCount }, (v, k) => this.getRandomShape(k));
+    const pairs = Array.from({ length: this.pairCount }, (v, k) => (
       <AnimatedLetterPair index={k} key={k} />
     ));
 
     return (
       <div className={styles.wrapper}>
 
-        <ShowTitle/>
-
         <TransitionGroup>
+
+          <AnimatedTitle UIStore={UIStore} shapeCount={this.shapeCount}>
+            <Underlay />
+          </AnimatedTitle>
+
           <ClusterShapes UIStore={UIStore}>
             {shapes}
           </ClusterShapes>
-        </TransitionGroup>
 
-        <TransitionGroup>
           {pairs}
+
+          <AnimatedTitle UIStore={UIStore}>
+            <PageTitle/>
+          </AnimatedTitle>
+
         </TransitionGroup>
 
       </div>

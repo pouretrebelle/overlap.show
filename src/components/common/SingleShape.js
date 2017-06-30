@@ -12,8 +12,8 @@ class SingleShape extends Component {
   constructor(props) {
     super(props);
     this.color = randomAccentColor(this.props.sometimesWhite);
-    this.positionX = this.props.x || randomXPosition();
-    this.positionY = this.props.y || randomYPosition();
+    this.positionX = (this.props.x !== undefined) ? this.props.x : randomXPosition();
+    this.positionY = (this.props.y !== undefined) ? this.props.y : randomYPosition();
   }
 
   render() {

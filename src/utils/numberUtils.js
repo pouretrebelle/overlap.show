@@ -13,3 +13,11 @@ export const randomZerodInt = (max) => (
 export const getOneOf = (list) => (
   list[randomZerodInt(list.length)]
 );
+
+export const clamp = (val, min, max) => (
+  Math.min(Math.max(val, min), max)
+);
+
+export const map = (val, start, end) => (
+  start+val*(end-start)
+);

@@ -11,7 +11,7 @@ class TriangleOutline extends Component {
   constructor(props) {
     super(props);
     this.size = this.props.size || randomMinMax(80, 250);
-    this.rotation = this.props.rotation || randomZerodInt(4);
+    this.rotation = (this.props.rotation !== undefined) ? this.props.rotation : randomZerodInt(4);
   }
 
   render() {

@@ -1,0 +1,71 @@
+@require '../variables/breakpoints.styl'
+@require '../variables/layout.styl'
+
+grid-large-gutter = page-margin-desktop
+grid-large-unit = 72px
+grid-large-width = 12 * (grid-large-gutter + grid-large-unit)
+
+grid-small-gutter = page-margin-mobile
+grid-small-unit = 28px
+grid-small-width = 12 * (grid-small-gutter + grid-small-unit)
+
+// container for grid
+grid()
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  max-width: grid-large-gutter + grid-large-width
+  box-sizing: border-box
+  margin-left: auto
+  margin-right: auto
+  padding-left: (grid-small-gutter / 2)px
+  padding-right: (grid-small-gutter / 2)px
+  @media site-small-min
+    padding-left: (grid-large-gutter / 2)px
+    padding-right: (grid-large-gutter / 2)px
+
+// container for grid width no outer gutter
+// used for nesting grids
+gutterless-grid()
+  grid()
+  padding: 0
+  margin: 0 0-(grid-small-gutter / 2)px
+  @media site-small-min
+    padding: 0
+    margin: 0 0-(grid-large-gutter / 2)px
+
+// cells for grid
+// cell() is flexible width
+// cell(6) is 6 columns wide
+// cell(6, 3) is 6 columns wide with a 3-column gap to the left
+// cell(6, 3, 3) is 6 columns wide with a 3-column gap to the left and right
+grid-cell(columns = false, left-margin = 0, right-margin = 0)
+  box-sizing: border-box
+  min-width: 0 // https://css-tricks.com/flexbox-truncated-text/
+  padding-left (grid-small-gutter / 2)px
+  padding-right: (grid-small-gutter / 2)px
+  @media site-small-min
+    padding-left: (grid-large-gutter / 2)px
+    padding-right: (grid-large-gutter / 2)px
+  if left-margin
+    margin-left: percentage(left-margin / 12)
+  if right-margin
+    margin-right: percentage(right-margin / 12)
+  if columns
+    flex-grow: 0
+    flex-basis: percentage(columns / 12)
+    max-width: percentage(columns / 12)
+  // if column width is not defined let it stretch
+  else
+    flex-grow: 1
+
+// general-purpose container that matches the size and padding as a full grid
+padded-container()
+  max-width: container-width
+  margin-left: auto
+  margin-right: auto
+  padding-left: page-margin-mobile
+  padding-right: page-margin-mobile
+  @media site-small-min
+    padding-left: page-margin-desktop
+    padding-right: page-margin-desktop

@@ -16,13 +16,16 @@
   grid-cell(12)
   @media site-small-min
     grid-cell(4)
+    writing-mode: vertical-rl
   @media site-medium-min
-    grid-cell(4, 2, 0)
+    grid-cell(4, 0, 2)
+    text-align: right
+    writing-mode: initial
 
 .content
   grid-cell(12)
   @media site-small-min
-    grid-cell(7, 0, 1)
+    grid-cell(8)
   @media site-medium-min
     grid-cell(5, 0, 1)
 

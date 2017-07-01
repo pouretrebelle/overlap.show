@@ -30,6 +30,7 @@ const HTML = (props) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0"
         />
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCogj0npcPg-pKkaRUUFjlonryjHMdqZio"></script>
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {css}

@@ -20,10 +20,10 @@ const Where = () => (
 
       <GoogleMapEmbed
         containerElement={
-          <div style={{ height: 300 }} />
+          <div style={{ height: 400 }} className={styles.mapEmbed} />
         }
         mapElement={
-          <div style={{ height: 300 }} />
+          <div style={{ height: '100%' }} />
         }
       />
     </div>

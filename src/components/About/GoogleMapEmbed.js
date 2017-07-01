@@ -99,7 +99,7 @@ const GoogleMapEmbed = withGoogleMap(() => (
           'featureType': 'poi.school',
           'elementType': 'geometry.fill',
           'stylers': [{
-            'color': ACCENT_COLORS[0],
+            'color': '#ffffff',
           },
           {
             'visibility': 'on',
@@ -111,7 +111,11 @@ const GoogleMapEmbed = withGoogleMap(() => (
           'elementType': 'geometry.fill',
           'stylers': [{
             'color': '#7a7a7a',
-          }],
+          },
+          {
+            'lightness': 50,
+          },
+          ],
         },
         {
           'featureType': 'road.highway',
@@ -120,7 +124,7 @@ const GoogleMapEmbed = withGoogleMap(() => (
             'color': '#ffffff',
           },
           {
-            'lightness': 29,
+            'lightness': 55,
           },
           {
             'weight': 0.2,
@@ -134,7 +138,7 @@ const GoogleMapEmbed = withGoogleMap(() => (
             'color': '#7a7a7a',
           },
           {
-            'lightness': 25,
+            'lightness': 65,
           },
           ],
         },
@@ -150,15 +154,14 @@ const GoogleMapEmbed = withGoogleMap(() => (
           ],
         },
         {
-          'featureType': 'transit',
+          'featureType': 'transit.line',
           'elementType': 'geometry',
           'stylers': [{
-            'color': '#f2f2f2',
+            'color': '#777777',
           },
           {
-            'lightness': 19,
-          },
-          ],
+            'visibility': 'on',
+          }],
         },
         {
           'featureType': 'transit.station',
@@ -171,7 +174,7 @@ const GoogleMapEmbed = withGoogleMap(() => (
           'featureType': 'water',
           'elementType': 'geometry',
           'stylers': [{
-            'color': '#353535',
+            'color': '#ffffff',
           }],
         },
       ],
@@ -186,10 +189,10 @@ const GoogleMapEmbed = withGoogleMap(() => (
       position={GOOGLE_MAPS_MARKER}
       icon={{
         path: window.google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
-        fillColor: 'white',
+        fillColor: ACCENT_COLORS[0],
         fillOpacity: 1,
-        strokeColor: 'dimgrey',
-        strokeWeight: 3,
+        strokeColor: 'white',
+        strokeWeight: 2,
         scale: 7,
       }}
       onClick={() => {

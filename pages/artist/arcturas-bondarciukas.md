@@ -8,4 +8,4 @@ Arturas is a London based artist who is working with computer generated imagery,
 
 Besides working as a photographer, Arturas has experience in retouching images to the industry standards and assisting professional photographers. Manipulating the lights and working in the studio environment comes naturally to him, enabling Arturas to deliver professional results for his clients.
 
-[http://abondphotography.tumblr.com/](http://abondphotography.tumblr.com/)
+[abondphotography.tumblr.com](http://abondphotography.tumblr.com/)

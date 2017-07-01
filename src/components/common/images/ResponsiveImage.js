@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { buildCloudinaryImageUrl, constructResponsiveImageDimensions } from 'src/utils/imageUtils';
 import { RESPONSIVE_IMAGE_SIZES } from 'src/constants/ui';
 
-import BasicResponsiveImage from 'components/common/images/BasicResponsiveImage';
+import BasicResponsiveImage from 'src/components/common/images/BasicResponsiveImage';
 
 const buildMediaQueryUrls = (imagePath, minWidth, options, retinaOptions) => {
   // if there's no minWidth leave a blank media query

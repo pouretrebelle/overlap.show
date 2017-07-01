@@ -1,3 +1,10 @@
+export const RESPONSIVE_IMAGE_SIZES = [
+  544,
+  850,
+  1176,
+  2400,
+];
+
 export const ACCENT_COLORS = [
   '#E5162E',
   '#555454',

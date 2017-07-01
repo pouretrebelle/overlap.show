@@ -101,10 +101,10 @@ class TitleWrapper extends Component {
   }
 
   render() {
-    const { children } = this.props;
+    const { children, zIndex } = this.props;
 
     return (
-      <div ref={element => this.wrapperElement = element} className={styles.fixed}>
+      <div ref={element => this.wrapperElement = element} className={styles.fixed} style={{zIndex: (zIndex !== undefined) ? zIndex : undefined}}>
         {children}
       </div>
     );
@@ -115,6 +115,7 @@ TitleWrapper.propTypes = {
   children: PropTypes.node,
   UIStore: PropTypes.object,
   shapeCount: PropTypes.number,
+  zIndex: PropTypes.number,
   isAnimated: PropTypes.bool,
 };
 

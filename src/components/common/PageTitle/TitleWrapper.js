@@ -17,7 +17,8 @@ class TitleWrapper extends Component {
   constructor(props) {
     super(props);
     this.wrapperElement = undefined;
-    this.currentThrough = 0;
+    this.currentThrough = 1;
+    this.hasAnimatedIn = (this.props.shapeCount && this.props.isAnimated) ? false : true;
     this.positionY = {
       start: 0,
       end: 0,
@@ -36,12 +37,7 @@ class TitleWrapper extends Component {
 
   initialisePosition() {
     this.getPositions();
-    TweenLite.set(
-      this.wrapperElement,
-      {
-        y: this.positionY.start,
-      },
-    );
+    this.setPosition();
   }
 
   getPositions = () => {
@@ -51,6 +47,10 @@ class TitleWrapper extends Component {
       start: this.props.isAnimated ? store.windowHeight * 0.5: store.windowHeight * 0.025,
       end: store.windowHeight * 0.025,
     };
+  }
+
+  triggerFadeIn = (callback) => {
+    TweenLite.delayedCall(SHAPE_ANIM_INITIAL_DELAY + this.props.shapeCount * SHAPE_ANIM_DELAY_BETWEEN_REVEALS, this.fadeIn, [callback]);
   }
 
   fadeIn = (callback) => {
@@ -66,25 +66,35 @@ class TitleWrapper extends Component {
       {
         opacity: 1,
         x: 0,
-        delay: SHAPE_ANIM_INITIAL_DELAY + this.props.shapeCount * SHAPE_ANIM_DELAY_BETWEEN_REVEALS,
         onComplete: callback,
       },
     );
+
+    this.hasAnimatedIn = true;
   }
 
   componentWillAppear(callback) {
-    if (this.props.shapeCount && this.props.isAnimated) this.fadeIn(callback);
+    if (this.props.shapeCount && this.props.isAnimated) this.triggerFadeIn(callback);
   }
 
   componentWillEnter(callback) {
-    if (this.props.shapeCount && this.props.isAnimated) this.fadeIn(callback);
+    if (this.props.shapeCount && this.props.isAnimated) this.triggerFadeIn(callback);
   }
 
   onWindowResized = () => {
-    this.onWindowScrolled();
+    this.setPosition();
   }
 
   onWindowScrolled = () => {
+    this.setPosition();
+
+    if (!this.hasAnimatedIn) {
+      TweenLite.killDelayedCallsTo(this.fadeIn);
+      this.fadeIn();
+    }
+  }
+
+  setPosition = () => {
     const store = this.props.UIStore;
     const through = clamp(store.scrollTop / store.windowHeight, 0, 1);
 
@@ -101,10 +111,16 @@ class TitleWrapper extends Component {
   }
 
   render() {
-    const { children, zIndex } = this.props;
+    const { children, zIndex, shapeCount, isAnimated } = this.props;
 
     return (
-      <div ref={element => this.wrapperElement = element} className={styles.fixed} style={{zIndex: (zIndex !== undefined) ? zIndex : undefined}}>
+      <div
+        ref={element => this.wrapperElement = element}
+        className={styles.fixed}
+        style={{
+          zIndex: (zIndex !== undefined) ? zIndex : undefined,
+          opacity: (shapeCount && isAnimated) ? 0 : 1,
+        }}>
         {children}
       </div>
     );

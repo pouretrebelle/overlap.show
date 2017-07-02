@@ -29,6 +29,6 @@
   z-index: -1
   background: color-secondary
 
-.staticHeader
-  position: fixed
-  top: 0
+.staticHeader:after
+  content: '.' // force uncollapsed margins
+  visibility: hidden

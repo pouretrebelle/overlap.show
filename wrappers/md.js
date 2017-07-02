@@ -18,7 +18,7 @@ const Markdown = ({ route }) => {
   ];
 
   return (
-    <div className='markdown'>
+    <div>
       <Helmet
         title={`${config.siteTitle} | ${page.title}`}
         meta={meta}
@@ -29,6 +29,7 @@ const Markdown = ({ route }) => {
       <Artist page={route.page} />
 
       <Artists artists={getArtistsFromRoute(route)} currentArtist={route.page}/>
+
     </div>
   );
 };

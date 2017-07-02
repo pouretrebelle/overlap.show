@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
-import styles from './About.styl';
+import styles from './Artists.styl';
 
 import ResponsiveImage from 'src/components/common/images/ResponsiveImage';
 
-const Who = ({ artists }) => {
+const Artists = ({ artists }) => {
   const artistList = artists.map((artist, i) => (
     <li key={i} className={styles.artist}>
       <Link
         to={prefixLink(artist.path)}
         title={artist.data.name}
-        style={{width: '100%'}}
+        style={{ width: '100%' }}
       >
         { artist.data.portrait ? (
           <ResponsiveImage
@@ -26,7 +26,7 @@ const Who = ({ artists }) => {
           <div className={styles.noPortrait}>
             {artist.data.name}
           </div>
-        ) }
+        )}
       </Link>
     </li>
   ));
@@ -42,8 +42,8 @@ const Who = ({ artists }) => {
   );
 };
 
-Who.propTypes = {
+Artists.propTypes = {
   artists: PropTypes.array.isRequired,
 };
 
-export default Who;
+export default Artists;

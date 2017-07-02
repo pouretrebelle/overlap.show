@@ -8,7 +8,7 @@ import ShapeField from 'src/components/common/ShapeField';
 import What from 'src/components/About/What';
 import When from 'src/components/About/When';
 import Where from 'src/components/About/Where';
-import Who from 'src/components/About/Who';
+import Artists from 'src/components/Artists';
 
 const IndexPage = ({ route }) => (
   <div>
@@ -31,7 +31,7 @@ const IndexPage = ({ route }) => (
     <What />
     <When />
     <Where />
-    <Who artists={getArtistsFromRoute(route)}/>
+    <Artists artists={getArtistsFromRoute(route)}/>
 
   </div>
 );

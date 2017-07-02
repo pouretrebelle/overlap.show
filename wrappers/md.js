@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import { config } from 'config';
+import StaticTitle from 'src/components/common/PageTitle/StaticTitle';
+import Artist from 'src/components/Artist';
 
 const Markdown = ({ route }) => {
   const page = route.page.data;
@@ -19,7 +21,10 @@ const Markdown = ({ route }) => {
         title={`${config.siteTitle} | ${page.title}`}
         meta={meta}
       />
-      <div dangerouslySetInnerHTML={{ __html: page.body }} />
+
+      <StaticTitle />
+
+      <Artist page={route.page} />
     </div>
   );
 };
@@ -27,3 +32,5 @@ const Markdown = ({ route }) => {
 Markdown.propTypes = {
   route: PropTypes.object,
 };
+
+export default Markdown;

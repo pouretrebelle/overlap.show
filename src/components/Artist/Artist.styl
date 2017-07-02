@@ -1,0 +1,32 @@
+@require '../../styles/variables/colors'
+@require '../../styles/variables/breakpoints'
+@require '../../styles/variables/typography'
+@require '../../styles/mixins/grid'
+@require '../../styles/mixins/layout'
+@require '../../styles/mixins/typography'
+
+.wrapper
+  grid()
+  margin-top: 6rem
+  align-items: flex-start
+
+.name
+  grid-cell(12)
+  @media site-small-min
+    grid-cell(8, 4)
+
+.portrait
+  grid-cell(12)
+  margin-top: 0.5rem
+  margin-bottom: 2rem
+  @media site-small-min
+    grid-cell(4)
+  @media site-medium-min
+    grid-cell(3)
+
+.bio
+  grid-cell(12)
+  @media site-small-min
+    grid-cell(8)
+  @media site-medium-min
+    grid-cell(8, 1)

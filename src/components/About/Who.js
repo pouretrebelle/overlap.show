@@ -33,9 +33,6 @@ const Who = ({ artists }) => {
 
   return (
     <section className={styles.wrapper}>
-      <h2 className={styles.title}>
-        Who
-      </h2>
       <div className={styles.fullContent}>
         <ul className={styles.artistList}>
           {artistList}

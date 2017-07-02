@@ -1,5 +1,6 @@
-siteTitle = "OVERLAP"
-siteDescription = "MA Computational Arts Show 2017"
+siteShortTitle = "OVERLAP"
+siteTitle = "OVERLAP SHOW 2017 | MA CompArts"
+siteDescription = "Overlap is the 2017 final degree show for the MA Computational Arts programme at Goldsmiths College, University of London. The weekend long exhibition explores the exciting new waves originating from the intersection of art and technology. It features ground-breaking installations, interactive virtual and augmented realities, and thought-provoking conceptual works by mixed disciplinary artists from fields as diverse as fine art, dance, photography, graphic design, puppetry, sound art, and architecture."
 siteKeywords = "Goldsmiths, MA Computational Arts, MACompArts, Overlap Show, creative computing"
 
 noProductionJavascript = false

@@ -1,10 +1,12 @@
+import { CLOUDINARY_URL } from 'src/constants/urls';
+
 export const buildCloudinaryImageUrl = (path, options) => {
   let params = [];
   for (var key in options) {
     params.push(`${key}_${options[key]}`);
   }
 
-  const finalUrl = `http://res.cloudinary.com/overlap-show/image/upload/${params.join(',')}/${path}`;
+  const finalUrl = `${CLOUDINARY_URL}/${params.join(',')}/${path}`;
   if (finalUrl.indexOf('http') === 0) {
     return finalUrl;
   } else if (finalUrl.indexOf('//') === 0) {

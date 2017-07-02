@@ -9,7 +9,7 @@ import { config } from 'config';
 const PageTitle = () => (
   <Link to={prefixLink('/')}>
     <h1 className={styles.title}>
-      {config.siteTitle}
+      {config.siteShortTitle}
     </h1>
   </Link>
 );

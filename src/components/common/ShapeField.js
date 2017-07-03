@@ -63,7 +63,9 @@ class ShapeField extends Component {
 
         <TransitionGroup>
 
-          <TitleWrapper UIStore={UIStore} shapeCount={this.shapeCount} zIndex={-1}>
+
+          <TitleWrapper UIStore={UIStore} shapeCount={this.shapeCount} zIndex={1}>
+            <PageTitle/>
             <Underlay />
           </TitleWrapper>
 
@@ -72,10 +74,6 @@ class ShapeField extends Component {
           </ClusterShapes>
 
           {pairs}
-
-          <TitleWrapper UIStore={UIStore} zIndex={1}>
-            <PageTitle/>
-          </TitleWrapper>
 
         </TransitionGroup>
 

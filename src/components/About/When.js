@@ -2,6 +2,8 @@ import React from 'react';
 
 import styles from './About.styl';
 
+import { EVENTBRITE_URL } from 'src/constants/urls';
+
 const When = () => (
   <section className={styles.wrapper}>
     <h2 className={styles.title}>
@@ -17,6 +19,11 @@ const When = () => (
           <small className={styles.footnote}>
             Special performances are scheduled for the exhibition’s opening night
           </small>
+        </li>
+        <li>
+          <a href={EVENTBRITE_URL} target='_blank' className={styles.eventbriteLink}>
+            Register on Eventbrite
+          </a>
         </li>
       </ol>
       <h3 className={styles.subtitle}>

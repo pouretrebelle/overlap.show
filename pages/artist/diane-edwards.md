@@ -1,7 +1,7 @@
 ---
 type: artist
 name: Diane Edwards
-portrait: diane.jpg
+portrait: diane2.jpg
 ---
 
 Diane is an interdisciplinary Scottish artist/researcher currently based in London. 

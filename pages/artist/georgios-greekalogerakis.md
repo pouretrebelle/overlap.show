@@ -1,6 +1,7 @@
 ---
 type: artist
 name: Georgios GreeKalogerakis
+portrait: georgios.jpg
 ---
 
 Georgios GreeKalogerakis was born in Thessaloniki Greece in 1978.  He studied construction techniques, with a specialisation in metal construction, and worked in the iron-building industry for a decade before embarking on a BA degree in Mixed Arts at the University of Westminster.

@@ -53,6 +53,12 @@ const HTML = (props) => {
       <body>
         <div id='react-mount' dangerouslySetInnerHTML={{ __html: props.body }} />
         {js}
+        { process.env.NODE_ENV === 'production' && <script
+          async
+          dangerouslySetInnerHTML={{
+            __html: '(function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,\'script\',\'https:\/\/www.google-analytics.com\/analytics.js\',\'ga\');\r\n\r\n  ga(\'create\', \'UA-102019354-1\', \'auto\');\r\n  ga(\'send\', \'pageview\');'
+          }}
+        /> }
       </body>
     </html>
   );

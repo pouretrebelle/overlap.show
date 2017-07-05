@@ -1,6 +1,7 @@
 ---
 type: artist
 name: Julianne Rahimi
+portrait: jules.jpg
 ---
 
 Julianne Rahimi is a visual artist, photographer, and programmer with interests in fashion and visual storytelling.

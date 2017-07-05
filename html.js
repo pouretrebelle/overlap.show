@@ -44,7 +44,9 @@ const HTML = (props) => {
         <meta property='og:image' content={`${CLOUDINARY_URL}/meta/ogfb.png`}/>
         <meta property='og:image:width' content='1200'/>
         <meta property='og:image:height' content='630'/>
-        <meta name="twitter:image" content={`${CLOUDINARY_URL}/meta/ogtw.png`}/>
+        <meta name='twitter:card' content='summary_large_image' />
+        <meta name='twitter:image' content={`${CLOUDINARY_URL}/meta/ogtw.png`}/>
+        <meta name='twitter:site' content='@overlapshow' />
 
         {head.meta.toComponent()}
 

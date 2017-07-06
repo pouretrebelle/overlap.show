@@ -188,12 +188,12 @@ const GoogleMapEmbed = withGoogleMap(() => (
     <Marker
       position={GOOGLE_MAPS_MARKER}
       icon={{
-        path: window.google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+        path: 'M8.5 2.2C7.5.3 5.2-.5 3.3.5S.6 3.8 1.5 5.7c.5.8 2.3 3.1 3.1 4.1.2.3.6.3.8 0 .8-1 2.6-3.3 3.1-4.1.6-1.1.6-2.4 0-3.5zM5 5.6c-.9 0-1.7-.8-1.7-1.7 0-.9.8-1.7 1.7-1.7s1.7.8 1.7 1.7c0 1-.7 1.7-1.7 1.7z',
         fillColor: ACCENT_COLORS[0],
         fillOpacity: 1,
-        strokeColor: 'white',
-        strokeWeight: 2,
-        scale: 7,
+        strokeWeight: 0,
+        scale: 4,
+        anchor: new window.google.maps.Point(5, 10),
       }}
       onClick={() => {
         window.open(GOOGLE_MAPS_REDIRECT_URL);

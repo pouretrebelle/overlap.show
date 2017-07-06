@@ -1,7 +1,7 @@
 ---
 type: artist
 name: Saskia Freeke
-portrait: saskia.jpg
+portrait: saskia2.jpg
 ---
 
 Saskia Freeke is an artist, creative coder, interaction designer, visual designer and educator. Her art work focuses on structure, geometry and playfulness. A big part of her artistic practice is her ongoing daily art project that she started January 2015. Here she explores and experiments with generative patterns and animations daily.

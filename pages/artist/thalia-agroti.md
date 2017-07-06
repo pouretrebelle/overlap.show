@@ -1,6 +1,7 @@
 ---
 type: artist
 name: Thalia Agroti
+portrait: thalia.jpg
 ---
 
 Thalia Agroti is a Greek-Cypriot multidisciplinary artist currently based in London. While her work mainly revolves around experimental sound creation, she is currently interested in exploring more immersive sonic environments that can be manipulated in a more tactile and material sense.

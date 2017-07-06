@@ -1,7 +1,7 @@
 ---
 type: artist
 name: Charlotte Dann
-portrait: charlotte.jpg
+portrait: charlotte2.jpg
 ---
 
 Charlotte is a designer/developer based in London, working across a wide spectrum of disciplines ranging from electronics to fine glasswork; she has not yet found a craft she does not wish to master. 

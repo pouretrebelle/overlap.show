@@ -17,12 +17,11 @@ const Artists = ({ artists, currentArtist }) => {
 
     return (
       <li key={i} className={artistClasses}>
-        <Link
-          to={prefixLink(artist.path)}
-          title={artist.data.name}
-          style={{ width: '100%' }}
-        >
-          { artist.data.portrait ? (
+        { artist.data.portrait &&
+          <Link
+            to={prefixLink(artist.path)}
+            title={artist.data.name}
+          >
             <div className={styles.portrait}>
               <ResponsiveImage
                 imagePath={`portraits/${artist.data.portrait}`}
@@ -31,24 +30,16 @@ const Artists = ({ artists, currentArtist }) => {
                 alt={artist.data.name}
               />
             </div>
-          ) : (
-            <div className={styles.noPortrait}>
-              {artist.data.name}
-            </div>
-          )}
-        </Link>
+          </Link>
+        }
       </li>
     );
   });
 
   return (
-    <section className={styles.wrapper}>
-      <div className={styles.fullContent}>
-        <ul className={styles.artistList}>
-          {artistList}
-        </ul>
-      </div>
-    </section>
+    <ul className={styles.artistList}>
+      {artistList}
+    </ul>
   );
 };
 

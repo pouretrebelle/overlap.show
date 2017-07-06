@@ -3,21 +3,14 @@
 @require '../../styles/variables/typography'
 @require '../../styles/mixins/grid'
 
-.wrapper
-  grid()
-  align-items: flex-start
-  margin-bottom: 3rem
-
 .artistList
-  gutterless-grid()
+  grid()
   list-style: none
-  padding: 0
-  align-items: stretch
+  margin-bottom: 3rem
 
 .artist
   grid-cell(6)
   margin-bottom: 16px
-  background-color: color-secondary
   background-clip: content-box
   display: flex
   align-items: center
@@ -28,11 +21,6 @@
     margin-bottom: 24px
   @media site-medium-min
     grid-cell(2)
-
-.noPortrait
-  color: color-background
-  text-align: center
-  padding: 0 1rem
 
 .currentArtist
   background-color: color-primary

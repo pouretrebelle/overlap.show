@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TweenLite from 'gsap';
 
-import styles from './PageTitle.styl';
+import styles from './TitleText.styl';
 
 import { randomMinMax, clamp, map } from 'src/utils/numberUtils';
 

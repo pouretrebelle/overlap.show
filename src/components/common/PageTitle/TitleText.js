@@ -1,12 +1,12 @@
 import React from 'react';
-
-import styles from './PageTitle.styl';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
+import styles from './TitleText.styl';
+
 import { config } from 'config';
 
-const PageTitle = () => (
+const TitleText = () => (
   <Link to={prefixLink('/')}>
     <h1 className={styles.title}>
       {config.siteShortTitle}
@@ -14,4 +14,4 @@ const PageTitle = () => (
   </Link>
 );
 
-export default PageTitle;
+export default TitleText;

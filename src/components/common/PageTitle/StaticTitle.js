@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 
-import styles from './PageTitle.styl';
+import styles from './TitleText.styl';
 
 import TitleWrapper from './TitleWrapper';
-import PageTitle from '.';
+import TitleText from './TitleText';
 
 @inject('UIStore') @observer
 class StaticTitle extends Component {
@@ -20,7 +20,7 @@ class StaticTitle extends Component {
     return (
       <header className={styles.staticHeader}>
         <TitleWrapper UIStore={UIStore} zIndex={1} isAnimated={false}>
-          <PageTitle />
+          <TitleText />
         </TitleWrapper>
       </header>
     );

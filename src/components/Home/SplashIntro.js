@@ -7,7 +7,7 @@ import styles from './SplashIntro.styl';
 
 import { getOneOf } from 'src/utils/numberUtils';
 import TitleWrapper from 'src/components/common/PageTitle/TitleWrapper';
-import PageTitle from 'src/components/common/PageTitle';
+import TitleText from 'src/components/common/PageTitle/TitleText';
 import Underlay from 'src/components/common/PageTitle/Underlay';
 import ClusterShapes from 'src/components/common/ClusterShapes';
 import Rectangle from 'src/components/common/shapes/Rectangle';
@@ -65,7 +65,7 @@ class SplashIntro extends Component {
 
 
           <TitleWrapper UIStore={UIStore} shapeCount={this.shapeCount} zIndex={1}>
-            <PageTitle />
+            <TitleText />
             <Underlay />
           </TitleWrapper>
 

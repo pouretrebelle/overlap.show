@@ -6,9 +6,8 @@ import TransitionGroup from 'react-transition-group/TransitionGroup';
 import styles from './SplashIntro.styl';
 
 import { getOneOf } from 'src/utils/numberUtils';
-import TitleWrapper from 'src/components/common/PageTitle/TitleWrapper';
-import TitleText from 'src/components/common/PageTitle/TitleText';
-import Underlay from 'src/components/common/PageTitle/Underlay';
+import AnimatedTitle from 'src/components/common/PageTitle/AnimatedTitle';
+import TitleUnderlay from 'src/components/common/PageTitle/TitleUnderlay';
 import ClusterShapes from 'src/components/common/ClusterShapes';
 import Rectangle from 'src/components/common/shapes/Rectangle';
 import RectangleOutline from 'src/components/common/shapes/RectangleOutline';
@@ -53,7 +52,12 @@ class SplashIntro extends Component {
 
   render() {
     const { UIStore } = this.props;
-    const shapes = Array.from({ length: this.shapeCount }, (v, k) => this.getRandomShape(k));
+
+    // generate shapes
+    let shapes = Array.from({ length: this.shapeCount }, (v, k) => this.getRandomShape(k));
+    // add title underlay
+    shapes.push(<TitleUnderlay x={0.5} y={0.5} key={this.shapeCount} />);
+
     const pairs = Array.from({ length: this.pairCount }, (v, k) => (
       <AnimatedLetterPair index={k} key={k} />
     ));
@@ -64,10 +68,7 @@ class SplashIntro extends Component {
         <TransitionGroup>
 
 
-          <TitleWrapper UIStore={UIStore} shapeCount={this.shapeCount} zIndex={1}>
-            <TitleText />
-            <Underlay />
-          </TitleWrapper>
+          <AnimatedTitle UIStore={UIStore} shapeCount={this.shapeCount} />
 
           <ClusterShapes UIStore={UIStore}>
             {shapes}

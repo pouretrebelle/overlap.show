@@ -4,8 +4,7 @@ import { observer, inject } from 'mobx-react';
 
 import styles from './TitleText.styl';
 
-import TitleWrapper from './TitleWrapper';
-import TitleText from './TitleText';
+import AnimatedTitle from './AnimatedTitle';
 
 @inject('UIStore') @observer
 class StaticTitle extends Component {
@@ -19,9 +18,10 @@ class StaticTitle extends Component {
 
     return (
       <header className={styles.staticHeader}>
-        <TitleWrapper UIStore={UIStore} zIndex={1} isAnimated={false}>
-          <TitleText />
-        </TitleWrapper>
+        <AnimatedTitle
+          UIStore={UIStore}
+          isAnimated={false}
+        />
       </header>
     );
   }

@@ -5,6 +5,7 @@ import TweenLite from 'gsap';
 import styles from './TitleText.styl';
 
 import { randomMinMax, clamp, map } from 'src/utils/numberUtils';
+import TitleText from './TitleText';
 
 import {
   SHAPE_ANIM_DELAY_BETWEEN_REVEALS,
@@ -12,7 +13,7 @@ import {
   SHAPE_ANIM_INITIAL_DELAY,
 } from 'src/constants/animation';
 
-class TitleWrapper extends Component {
+class AnimatedTitle extends Component {
 
   constructor(props) {
     super(props);
@@ -111,32 +112,29 @@ class TitleWrapper extends Component {
   }
 
   render() {
-    const { children, zIndex, shapeCount, isAnimated } = this.props;
+    const { shapeCount, isAnimated } = this.props;
 
     return (
       <div
         ref={element => this.wrapperElement = element}
         className={styles.fixed}
         style={{
-          zIndex: (zIndex !== undefined) ? zIndex : undefined,
           opacity: (shapeCount && isAnimated) ? 0 : 1,
         }}>
-        {children}
+        <TitleText />
       </div>
     );
   }
 }
 
-TitleWrapper.propTypes = {
-  children: PropTypes.node,
+AnimatedTitle.propTypes = {
   UIStore: PropTypes.object,
   shapeCount: PropTypes.number,
-  zIndex: PropTypes.number,
   isAnimated: PropTypes.bool,
 };
 
-TitleWrapper.defaultProps = {
+AnimatedTitle.defaultProps = {
   isAnimated: true,
 };
 
-export default TitleWrapper;
+export default AnimatedTitle;

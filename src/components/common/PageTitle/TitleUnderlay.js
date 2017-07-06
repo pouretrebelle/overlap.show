@@ -2,8 +2,8 @@ import React from 'react';
 
 import styles from './TitleText.styl';
 
-const Underlay = () => (
+const TitleUnderlay = () => (
   <div className={styles.underlay} />
 );
 
-export default Underlay;
+export default TitleUnderlay;

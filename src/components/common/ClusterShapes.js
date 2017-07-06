@@ -14,9 +14,9 @@ import {
   ANIMATION_BREAKPOINT,
 } from 'src/constants/animation';
 
-const getRandomPosition = () => {
-  const x = randomMinMax(0.1, 0.9);
-  const y = randomMinMax(0.1, 0.9);
+const getRandomPosition = (child) => {
+  const x = child.props.x || randomMinMax(0.1, 0.9);
+  const y = child.props.y || randomMinMax(0.1, 0.9);
 
   return {
     start: {
@@ -40,7 +40,7 @@ class ClusterShapes extends Component {
     this.shapes = this.props.children.map(child => {
       return {
         shape: child,
-        position: getRandomPosition(),
+        position: getRandomPosition(child),
         element: undefined,
         initialAnimationComplete: false,
       };

@@ -3,26 +3,26 @@ import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
-import styles from './ShapeField.styl';
+import styles from './SplashIntro.styl';
 
 import { getOneOf } from 'src/utils/numberUtils';
-import TitleWrapper from './PageTitle/TitleWrapper';
-import PageTitle from './PageTitle';
-import Underlay from './PageTitle/Underlay';
-import ClusterShapes from './ClusterShapes';
-import Rectangle from './shapes/Rectangle';
-import RectangleOutline from './shapes/RectangleOutline';
-import RectangleStack from './shapes/RectangleStack';
-import RectangleDiagStack from './shapes/RectangleDiagStack';
-import Triangle from './shapes/Triangle';
-import TriangleOutline from './shapes/TriangleOutline';
-import TriangleStack from './shapes/TriangleStack';
-import CircleGrid from './shapes/CircleGrid';
-import LetterString from './shapes/LetterString';
-import AnimatedLetterPair from './shapes/AnimatedLetterPair';
+import TitleWrapper from 'src/components/common/PageTitle/TitleWrapper';
+import PageTitle from 'src/components/common/PageTitle';
+import Underlay from 'src/components/common/PageTitle/Underlay';
+import ClusterShapes from 'src/components/common/ClusterShapes';
+import Rectangle from 'src/components/common/shapes/Rectangle';
+import RectangleOutline from 'src/components/common/shapes/RectangleOutline';
+import RectangleStack from 'src/components/common/shapes/RectangleStack';
+import RectangleDiagStack from 'src/components/common/shapes/RectangleDiagStack';
+import Triangle from 'src/components/common/shapes/Triangle';
+import TriangleOutline from 'src/components/common/shapes/TriangleOutline';
+import TriangleStack from 'src/components/common/shapes/TriangleStack';
+import CircleGrid from 'src/components/common/shapes/CircleGrid';
+import LetterString from 'src/components/common/shapes/LetterString';
+import AnimatedLetterPair from 'src/components/common/shapes/AnimatedLetterPair';
 
 @inject('UIStore') @observer
-class ShapeField extends Component {
+class SplashIntro extends Component {
 
   constructor(props) {
     super(props);
@@ -48,7 +48,7 @@ class ShapeField extends Component {
   getRandomShape = (i) => {
     const Shape = getOneOf(this.availableShapes);
 
-    return <Shape key={i}/>;
+    return <Shape key={i} />;
   }
 
   render() {
@@ -65,7 +65,7 @@ class ShapeField extends Component {
 
 
           <TitleWrapper UIStore={UIStore} shapeCount={this.shapeCount} zIndex={1}>
-            <PageTitle/>
+            <PageTitle />
             <Underlay />
           </TitleWrapper>
 
@@ -82,8 +82,8 @@ class ShapeField extends Component {
   }
 }
 
-ShapeField.propTypes = {
+SplashIntro.propTypes = {
   UIStore: PropTypes.object,
 };
 
-export default ShapeField;
+export default SplashIntro;

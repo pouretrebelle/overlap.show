@@ -3,12 +3,7 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import { config } from 'config';
-import { getArtistsFromRoute } from 'src/utils/contentUtils';
-import ShapeField from 'src/components/common/ShapeField';
-import What from 'src/components/About/What';
-import When from 'src/components/About/When';
-import Where from 'src/components/About/Where';
-import Artists from 'src/components/Artists';
+import Home from 'src/components/Home';
 
 const IndexPage = ({ route }) => (
   <div>
@@ -26,12 +21,7 @@ const IndexPage = ({ route }) => (
       ]}
     />
 
-    <ShapeField />
-
-    <What />
-    <When />
-    <Where />
-    <Artists artists={getArtistsFromRoute(route)}/>
+    <Home route={route} />
 
   </div>
 );

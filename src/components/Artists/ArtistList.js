@@ -4,11 +4,11 @@ import classNames from 'classnames';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
-import styles from './Artists.styl';
+import styles from './ArtistList.styl';
 
 import ResponsiveImage from 'src/components/common/images/ResponsiveImage';
 
-const Artists = ({ artists, currentArtist }) => {
+const ArtistList = ({ artists, currentArtist }) => {
   const artistList = artists.map((artist, i) => {
     const artistClasses = classNames({
       [styles.artist]: true,
@@ -43,9 +43,9 @@ const Artists = ({ artists, currentArtist }) => {
   );
 };
 
-Artists.propTypes = {
+ArtistList.propTypes = {
   artists: PropTypes.array.isRequired,
   currentArtist: PropTypes.object,
 };
 
-export default Artists;
+export default ArtistList;

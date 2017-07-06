@@ -5,8 +5,8 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import { getArtistsFromRoute } from 'src/utils/contentUtils';
 import StaticTitle from 'src/components/common/PageTitle/StaticTitle';
-import Artists from 'src/components/Artists';
-import Artist from 'src/components/Artist';
+import ArtistList from 'src/components/Artists/ArtistList';
+import Artist from 'src/components/Artists/Artist';
 
 const Markdown = ({ route }) => {
   const page = route.page.data;
@@ -28,7 +28,7 @@ const Markdown = ({ route }) => {
 
       <Artist page={route.page} />
 
-      <Artists artists={getArtistsFromRoute(route)} currentArtist={route.page}/>
+      <ArtistList artists={getArtistsFromRoute(route)} currentArtist={route.page}/>
 
     </div>
   );

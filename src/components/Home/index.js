@@ -6,7 +6,7 @@ import SplashIntro from './SplashIntro';
 import What from 'src/components/About/What';
 import When from 'src/components/About/When';
 import Where from 'src/components/About/Where';
-import Artists from 'src/components/Artists';
+import ArtistList from 'src/components/Artists/ArtistList';
 
 const Home = ({ route }) => (
   <div>
@@ -16,7 +16,7 @@ const Home = ({ route }) => (
     <What />
     <When />
     <Where />
-    <Artists artists={getArtistsFromRoute(route)} />
+    <ArtistList artists={getArtistsFromRoute(route)} />
 
   </div>
 );

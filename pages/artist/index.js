@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import { getArtistsFromRoute } from 'src/utils/contentUtils';
 import StaticTitle from 'src/components/common/PageTitle/StaticTitle';
-import Artists from 'src/components/Artists';
+import ArtistList from 'src/components/Artists/ArtistList';
 
 const ArtistsPage = ({ route }) => (
   <div>
@@ -25,7 +25,7 @@ const ArtistsPage = ({ route }) => (
 
     <StaticTitle />
     <div style={{height: '6rem'}} />
-    <Artists artists={getArtistsFromRoute(route)}/>
+    <ArtistList artists={getArtistsFromRoute(route)}/>
 
   </div>
 );

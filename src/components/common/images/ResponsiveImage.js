@@ -76,6 +76,7 @@ const ResponsiveImage = ({ imagePath, imageQuality, aspectRatio, width, height, 
 
   return (
     <BasicResponsiveImage
+      key={imageUrls[0][0]}
       initialImageUrl={imageUrls[0][0]}
       mediaQueries={mediaQueries}
       imageUrls={imageUrls}

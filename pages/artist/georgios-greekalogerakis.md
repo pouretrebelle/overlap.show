@@ -10,4 +10,4 @@ Georgios’ previous works include the undeniably impressive ‘S’ project (St
 
 Georgios had his first solo show in 2006. He has taken part in group shows and art fairs in London, Greece and the US. He lives in UK, working in his designing studio based in London and his workshop in Thessaloniki, Greece.
 
-[www.greekalogerakis.com](http://charlottedann.com/)
+[www.greekalogerakis.com](http://greekalogerakis.com/)

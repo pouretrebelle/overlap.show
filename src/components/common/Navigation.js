@@ -6,6 +6,9 @@ import styles from './Navigation.styl';
 
 const Navigation = () => (
   <nav className={styles.navigation}>
+    <Link to={prefixLink('/about/')} className={styles.link}>
+      About
+    </Link>
     <Link to={prefixLink('/artists/')} className={styles.link}>
       Artists
     </Link>

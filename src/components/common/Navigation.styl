@@ -1,0 +1,19 @@
+@require '../../styles/variables/colors'
+@require '../../styles/variables/breakpoints'
+@require '../../styles/variables/typography'
+
+.navigation
+  position: fixed
+  z-index: 10
+  top: 0
+  right: 0
+
+.link
+  display: block
+  margin: 1rem
+  font-size: 2rem
+  line-height: 2rem
+  text-transform: uppercase
+  @media site-small-max
+    color: color-secondary
+    font-weight: font-weight-heavy

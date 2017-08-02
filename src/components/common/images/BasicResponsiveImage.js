@@ -8,9 +8,7 @@ const BasicResponsiveImage = ({ initialImageUrl, mediaQueries, imageUrls, ...pro
       `${imageUrls[i][0]}, ${imageUrls[i][1]} 2x` :
       imageUrls[i];
 
-    return query ? (
-      <source media={query} key={i} srcSet={source} />
-    ) : '';
+    return <source media={query} key={i} srcSet={source} />;
   });
   // flip the order because specificity works the opposite way around to css
   sources.reverse();

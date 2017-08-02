@@ -15,15 +15,15 @@ const When = () => (
       </h3>
       <ol className={styles.openingHours}>
         <li>
+          <a href={EVENTBRITE_URL} target='_blank' className={styles.eventbriteLink}>
+            Register on Eventbrite
+          </a>
+        </li>
+        <li>
           6pm-9pm Thursday <em className={styles.emphasis}>7 Sept</em>ember 2017
           <small className={styles.footnote}>
             Special performances are scheduled for the exhibition’s opening night
           </small>
-        </li>
-        <li>
-          <a href={EVENTBRITE_URL} target='_blank' className={styles.eventbriteLink}>
-            Register on Eventbrite
-          </a>
         </li>
       </ol>
       <h3 className={styles.subtitle}>

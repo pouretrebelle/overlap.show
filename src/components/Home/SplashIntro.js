@@ -5,20 +5,20 @@ import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import styles from './SplashIntro.styl';
 
-import { getOneOf } from 'src/utils/numberUtils';
-import AnimatedTitle from 'src/components/common/PageTitle/AnimatedTitle';
-import TitleUnderlay from 'src/components/common/PageTitle/TitleUnderlay';
-import ClusterShapes from 'src/components/common/ClusterShapes';
-import Rectangle from 'src/components/common/shapes/Rectangle';
-import RectangleOutline from 'src/components/common/shapes/RectangleOutline';
-import RectangleStack from 'src/components/common/shapes/RectangleStack';
-import RectangleDiagStack from 'src/components/common/shapes/RectangleDiagStack';
-import Triangle from 'src/components/common/shapes/Triangle';
-import TriangleOutline from 'src/components/common/shapes/TriangleOutline';
-import TriangleStack from 'src/components/common/shapes/TriangleStack';
-import CircleGrid from 'src/components/common/shapes/CircleGrid';
-import LetterString from 'src/components/common/shapes/LetterString';
-import AnimatedLetterPair from 'src/components/common/shapes/AnimatedLetterPair';
+import { getOneOf } from '../../utils/numberUtils';
+import AnimatedTitle from '../common/PageTitle/AnimatedTitle';
+import TitleUnderlay from '../common/PageTitle/TitleUnderlay';
+import ClusterShapes from '../common/ClusterShapes';
+import Rectangle from '../common/shapes/Rectangle';
+import RectangleOutline from '../common/shapes/RectangleOutline';
+import RectangleStack from '../common/shapes/RectangleStack';
+import RectangleDiagStack from '../common/shapes/RectangleDiagStack';
+import Triangle from '../common/shapes/Triangle';
+import TriangleOutline from '../common/shapes/TriangleOutline';
+import TriangleStack from '../common/shapes/TriangleStack';
+import CircleGrid from '../common/shapes/CircleGrid';
+import LetterString from '../common/shapes/LetterString';
+import AnimatedLetterPair from '../common/shapes/AnimatedLetterPair';
 
 @inject('UIStore') @observer
 class SplashIntro extends Component {

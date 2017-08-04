@@ -4,14 +4,14 @@ import TweenLite from 'gsap';
 
 import styles from './TitleText.styl';
 
-import { randomMinMax, clamp, map } from 'src/utils/numberUtils';
+import { randomMinMax, clamp, map } from '../../../utils/numberUtils';
 import TitleText from './TitleText';
 
 import {
   SHAPE_ANIM_DELAY_BETWEEN_REVEALS,
   SHAPE_ANIM_DURATION,
   SHAPE_ANIM_INITIAL_DELAY,
-} from 'src/constants/animation';
+} from '../../../constants/animation';
 
 class AnimatedTitle extends Component {
 

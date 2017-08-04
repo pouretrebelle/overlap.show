@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './Triangle.styl';
 
-import { randomMinMax, randomZerodInt } from 'src/utils/numberUtils';
+import { randomMinMax, randomZerodInt } from '../../../utils/numberUtils';
 
 class Triangle extends Component {
 

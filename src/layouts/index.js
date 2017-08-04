@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../src/styles/application.styl';
+import '../styles/application.styl';
 
-import Navigation from 'src/components/common/Navigation';
-import Footer from 'src/components/common/Footer';
+import Navigation from '../components/common/Navigation';
+import Footer from '../components/common/Footer';
 
 const Template = ({ children }) => (
   <div>
     <Navigation />
-    {children}
+    {children()}
     <Footer />
   </div>
 );

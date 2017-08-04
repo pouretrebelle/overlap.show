@@ -3,8 +3,8 @@ import classNames from 'classnames';
 
 import styles from './LetterString.styl';
 
-import { possibleLetterStringSymbols } from 'src/constants/ui';
-import { randomZerodInt, randomMinMax, getOneOf } from 'src/utils/numberUtils';
+import { possibleLetterStringSymbols } from '../../../constants/ui';
+import { randomZerodInt, randomMinMax, getOneOf } from '../../../utils/numberUtils';
 
 class LetterString extends Component {
 

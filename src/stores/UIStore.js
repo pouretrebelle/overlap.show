@@ -1,5 +1,5 @@
 import { observable, action } from 'mobx';
-import debounce from 'src/utils/debounce';
+import debounce from '../utils/debounce';
 
 class UIStore {
 

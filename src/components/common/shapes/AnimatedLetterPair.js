@@ -5,8 +5,8 @@ import classNames from 'classnames';
 
 import styles from './AnimatedLetterPair.styl';
 
-import { possibleLetterPairSymbols } from 'src/constants/ui';
-import { randomZerodInt, randomMinMax, getOneOf } from 'src/utils/numberUtils';
+import { possibleLetterPairSymbols } from '../../../constants/ui';
+import { randomZerodInt, randomMinMax, getOneOf } from '../../../utils/numberUtils';
 import SingleShape from '../SingleShape';
 
 const DELAY_BETWEEN_PAIRS = 0.05;

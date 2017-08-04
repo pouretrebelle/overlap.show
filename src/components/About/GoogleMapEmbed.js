@@ -1,7 +1,7 @@
 import React from 'react';
 import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
-import { GOOGLE_MAPS_CENTER, GOOGLE_MAPS_MARKER, GOOGLE_MAPS_ZOOM, GOOGLE_MAPS_REDIRECT_URL } from 'src/constants/googleMaps';
-import { ACCENT_COLORS } from 'src/constants/ui';
+import { GOOGLE_MAPS_CENTER, GOOGLE_MAPS_MARKER, GOOGLE_MAPS_ZOOM, GOOGLE_MAPS_REDIRECT_URL } from '../../constants/googleMaps';
+import { ACCENT_COLORS } from '../../constants/ui';
 
 const GoogleMapEmbed = withGoogleMap(() => (
   <GoogleMap

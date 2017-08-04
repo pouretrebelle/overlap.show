@@ -1,4 +1,4 @@
-import { CLOUDINARY_URL } from 'src/constants/urls';
+import { CLOUDINARY_URL } from '../constants/urls';
 
 export const buildCloudinaryImageUrl = (path, options) => {
   let params = [];

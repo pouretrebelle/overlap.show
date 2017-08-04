@@ -7,7 +7,7 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve-build",
+    "serve": "gatsby serve",
     "lint": "stylint src && eslint --ext jsx --ext js src"
   },
   "author": "Charlotte Dann",
@@ -18,7 +18,8 @@
     "classnames": "^2.2.5",
     "eslint": "4.1.0",
     "eslint-plugin-react": "7.1.0",
-    "gatsby": "0.12.48",
+    "gatsby": "1.6.3",
+    "gatsby-link": "^1.6.3",
     "gsap": "^1.19.1",
     "mobx": "^3.1.16",
     "mobx-react": "^4.2.1",

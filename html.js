@@ -1,28 +1,19 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { prefixLink } from 'gatsby-helpers';
 
 import { config } from 'config';
-import { CLOUDINARY_URL } from 'src/constants/urls';
+import { CLOUDINARY_URL } from './src/constants/urls';
 
 const BUILD_TIME = new Date().getTime();
 
 const HTML = (props) => {
   const head = Helmet.rewind();
 
-  // only include bundle.js if we are running in production mode
-  // and noProductionJavascript is set as true
-  let js = <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />;
-  if (process.env.NODE_ENV === 'production' && config.noProductionJavascript ) {
-    js = null;
-  }
-
   // include link to the css file if we are running in production mode
   let css;
   if (process.env.NODE_ENV === 'production') {
-    css = <link rel='stylesheet' href={prefixLink(`/styles.css?t=${BUILD_TIME}`)} />;
+    css = <link rel='stylesheet' href={`/styles.css?t=${BUILD_TIME}`} />;
   }
-
   return (
     <html lang='en'>
       <head>
@@ -51,10 +42,14 @@ const HTML = (props) => {
         {head.meta.toComponent()}
 
         {css}
+        {props.headComponents}
       </head>
       <body>
-        <div id='react-mount' dangerouslySetInnerHTML={{ __html: props.body }} />
-        {js}
+        <div
+          id='___gatsby'
+          dangerouslySetInnerHTML={{ __html: props.body }}
+        />
+        {this.props.postBodyComponents}
         { process.env.NODE_ENV === 'production' && <script
           async
           dangerouslySetInnerHTML={{

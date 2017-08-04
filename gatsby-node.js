@@ -1,6 +1,6 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-exports.modifyWebpackConfig = function (config, stage) {
+exports.modifyWebpackConfig = ({ config, stage }) => {
   config.removeLoader('css');
 
   if (stage == 'develop') {

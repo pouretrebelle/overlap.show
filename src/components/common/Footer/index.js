@@ -2,10 +2,10 @@ import React from 'react';
 
 import styles from './Footer.styl';
 
-import { TWITTER_URL, INSTAGRAM_URL, FACEBOOK_URL } from 'src/constants/urls';
-import TwitterIcon from 'src/components/common/icons/TwitterIcon';
-import InstagramIcon from 'src/components/common/icons/InstagramIcon';
-import FacebookIcon from 'src/components/common/icons/FacebookIcon';
+import { TWITTER_URL, INSTAGRAM_URL, FACEBOOK_URL } from '../../../constants/urls';
+import TwitterIcon from '../icons/TwitterIcon';
+import InstagramIcon from '../icons/InstagramIcon';
+import FacebookIcon from '../icons/FacebookIcon';
 
 const Footer = () => (
   <div className={styles.footer}>

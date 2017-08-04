@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import styles from './SingleShape.styl';
 
-import { randomAccentColor } from 'src/utils/uiUtils';
-import { randomXPosition } from 'src/utils/uiUtils';
-import { randomYPosition } from 'src/utils/uiUtils';
+import { randomAccentColor } from '../../utils/uiUtils';
+import { randomXPosition } from '../../utils/uiUtils';
+import { randomYPosition } from '../../utils/uiUtils';
 
 class SingleShape extends Component {
 

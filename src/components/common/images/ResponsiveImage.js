@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { buildCloudinaryImageUrl, constructResponsiveImageDimensions } from 'src/utils/imageUtils';
-import { RESPONSIVE_IMAGE_SIZES } from 'src/constants/ui';
+import { buildCloudinaryImageUrl, constructResponsiveImageDimensions } from '../../../utils/imageUtils';
+import { RESPONSIVE_IMAGE_SIZES } from '../../../constants/ui';
 
-import BasicResponsiveImage from 'src/components/common/images/BasicResponsiveImage';
+import BasicResponsiveImage from './BasicResponsiveImage';
 
 const buildMediaQueryUrls = (imagePath, minWidth, options, retinaOptions) => {
   // if there's no minWidth leave a blank media query

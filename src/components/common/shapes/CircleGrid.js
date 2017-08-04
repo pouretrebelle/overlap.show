@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './CircleGrid.styl';
 
-import { randomZerodInt } from 'src/utils/numberUtils';
+import { randomZerodInt } from '../../../utils/numberUtils';
 
 const CIRCLE_SIZE = 13;
 

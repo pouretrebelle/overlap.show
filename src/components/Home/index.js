@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { getArtistsFromRoute } from 'src/utils/contentUtils';
+import { getArtistsFromRoute } from '../../utils/contentUtils';
 import SplashIntro from './SplashIntro';
-import What from 'src/components/About/What';
-import When from 'src/components/About/When';
-import Where from 'src/components/About/Where';
-import ArtistList from 'src/components/Artists/ArtistList';
+import What from '../About/What';
+import When from '../About/When';
+import Where from '../About/Where';
+import ArtistList from '../Artists/ArtistList';
 
 const Home = ({ route }) => (
   <div>

@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import { config } from 'config';
-import { getArtistsFromRoute } from 'src/utils/contentUtils';
-import StaticTitle from 'src/components/common/PageTitle/StaticTitle';
-import ArtistList from 'src/components/Artists/ArtistList';
-import Artist from 'src/components/Artists/Artist';
+import { getArtistsFromRoute } from '../utils/contentUtils';
+import StaticTitle from '../components/common/PageTitle/StaticTitle';
+import ArtistList from '../components/Artists/ArtistList';
+import Artist from '../components/Artists/Artist';
 
 const Markdown = ({ route }) => {
   const page = route.page.data;

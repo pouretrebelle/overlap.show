@@ -4,7 +4,7 @@ import TweenLite from 'gsap';
 
 import styles from './ClusterShapes.styl';
 
-import { randomMinMax } from 'src/utils/numberUtils';
+import { randomMinMax } from '../../utils/numberUtils';
 import SingleShape from './SingleShape';
 
 import {
@@ -12,7 +12,7 @@ import {
   SHAPE_ANIM_DURATION,
   SHAPE_ANIM_INITIAL_DELAY,
   ANIMATION_BREAKPOINT,
-} from 'src/constants/animation';
+} from '../../constants/animation';
 
 const getRandomPosition = (child) => {
   const x = child.props.x || randomMinMax(0.1, 0.9);

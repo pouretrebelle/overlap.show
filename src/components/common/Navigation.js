@@ -1,15 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
+import Link from 'gatsby-link';
 
 import styles from './Navigation.styl';
 
 const Navigation = () => (
   <nav className={styles.navigation}>
-    <Link to={prefixLink('/about/')} className={styles.link}>
+    <Link to={'/about/'} className={styles.link}>
       About
     </Link>
-    <Link to={prefixLink('/artists/')} className={styles.link}>
+    <Link to={'/artists/'} className={styles.link}>
       Artists
     </Link>
   </nav>

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import styles from './TriangleOutline.styl';
 
-import { randomMinMax, randomZerodInt } from 'src/utils/numberUtils';
+import { randomMinMax, randomZerodInt } from '../../../utils/numberUtils';
 
 class TriangleOutline extends Component {
 

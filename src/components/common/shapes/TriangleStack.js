@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import styles from './TriangleStack.styl';
 
-import { randomMinMax, randomZerodInt } from 'src/utils/numberUtils';
+import { randomMinMax, randomZerodInt } from '../../../utils/numberUtils';
 import TriangleOutline from './TriangleOutline';
 
 class TriangleStack extends Component {

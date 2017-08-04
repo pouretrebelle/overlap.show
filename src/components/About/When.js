@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './About.styl';
 
-import { EVENTBRITE_URL } from 'src/constants/urls';
+import { EVENTBRITE_URL } from '../../constants/urls';
 
 const When = () => (
   <section className={styles.wrapper}>

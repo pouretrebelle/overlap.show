@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './RectangleOutline.styl';
 
-import { randomMinMax } from 'src/utils/numberUtils';
+import { randomMinMax } from '../../../utils/numberUtils';
 
 class RectangleOutline extends Component {
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Artist.styl';
 
-import ResponsiveImage from 'src/components/common/images/ResponsiveImage';
+import ResponsiveImage from '../common/images/ResponsiveImage';
 
 const Artist = ({ page }) => (
   <div className={styles.wrapper}>

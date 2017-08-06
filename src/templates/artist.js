@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
+import { filterAndSortArtists } from '../utils/contentUtils';
+
 import StaticTitle from '../components/common/PageTitle/StaticTitle';
 import Artist from '../components/Artists/Artist';
+import ArtistList from '../components/Artists/ArtistList';
 
 const ArtistPage = ({ data }) => {
   const artistData = data.markdownRemark;
@@ -26,6 +29,8 @@ const ArtistPage = ({ data }) => {
       <StaticTitle title={data.site.siteMetadata.shortTitle} />
 
       <Artist data={artistData} />
+
+      <ArtistList artists={filterAndSortArtists(data.allMarkdownRemark.edges)} currentArtist={artistData} />
 
     </div>
   );
@@ -51,6 +56,20 @@ export const pageQuery = graphql`
       frontmatter {
         name
         portrait
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            type
+            name
+            portrait
+          }
+        }
       }
     }
   }

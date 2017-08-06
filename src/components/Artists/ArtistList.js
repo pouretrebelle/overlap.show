@@ -11,7 +11,7 @@ const ArtistList = ({ artists, currentArtist }) => {
   const artistList = artists.map((artist, i) => {
     const artistClasses = classNames({
       [styles.artist]: true,
-      [styles.currentArtist]: artist == currentArtist,
+      [styles.currentArtist]: currentArtist && artist.frontmatter.name === currentArtist.frontmatter.name,
     });
 
     return (

@@ -1,15 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'mobx-react';
 import UIStore from './src/stores/UIStore';
 
-exports.wrapRootComponent = Root => {
+exports.replaceRouterComponent = ({ history }) => {
   const store = new UIStore;
 
-  return () => (
+  const ConnectedRouterWrapper = ({ children }) => (
     <Provider UIStore={store}>
-      <Root />
+      <Router history={history}>{children}</Router>
     </Provider>
   );
+
+  return ConnectedRouterWrapper;
 };
 
 exports.onRouteUpdate = location => {

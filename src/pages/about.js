@@ -21,7 +21,7 @@ const AboutPage = ({ data }) => (
       ]}
     />
 
-    <StaticTitle />
+    <StaticTitle title={data.site.siteMetadata.shortTitle} />
     <div style={{ height: '6rem' }} />
     <About />
 
@@ -38,6 +38,7 @@ export const pageQuery = graphql`
   query AboutQuery {
     site {
       siteMetadata {
+        shortTitle
         title
         description
         keywords

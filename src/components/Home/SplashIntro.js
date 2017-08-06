@@ -51,7 +51,7 @@ class SplashIntro extends Component {
   }
 
   render() {
-    const { UIStore } = this.props;
+    const { UIStore, title } = this.props;
 
     // generate shapes
     let shapes = Array.from({ length: this.shapeCount }, (v, k) => this.getRandomShape(k));
@@ -67,8 +67,7 @@ class SplashIntro extends Component {
 
         <TransitionGroup>
 
-
-          <AnimatedTitle UIStore={UIStore} shapeCount={this.shapeCount} />
+          <AnimatedTitle title={title} UIStore={UIStore} shapeCount={this.shapeCount} />
 
           <ClusterShapes UIStore={UIStore}>
             {shapes}
@@ -85,6 +84,7 @@ class SplashIntro extends Component {
 
 SplashIntro.propTypes = {
   UIStore: PropTypes.object,
+  title: PropTypes.string,
 };
 
 export default SplashIntro;

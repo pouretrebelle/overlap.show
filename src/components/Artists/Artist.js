@@ -5,25 +5,25 @@ import styles from './Artist.styl';
 
 import ResponsiveImage from '../common/images/ResponsiveImage';
 
-const Artist = ({ page }) => (
+const Artist = ({ data }) => (
   <div className={styles.wrapper}>
     <h2 className={styles.name}>
-      {page.data.name}
+      {data.frontmatter.name}
     </h2>
     <div className={styles.portrait}>
-      { page.data.portrait && <ResponsiveImage
-        imagePath={`portraits/${page.data.portrait}`}
+      { data.frontmatter.portrait && <ResponsiveImage
+        imagePath={`portraits/${data.frontmatter.portrait}`}
         width={[518, 252, 264]}
         maxBreakpoint={1176}
-        alt={page.data.name}
+        alt={data.frontmatter.name}
       /> }
     </div>
-    <div className={styles.bio} dangerouslySetInnerHTML={{ __html: page.data.body }} />
+    <div className={styles.bio} dangerouslySetInnerHTML={{ __html: data.html }} />
   </div>
 );
 
 Artist.propTypes = {
-  page: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 export default Artist;

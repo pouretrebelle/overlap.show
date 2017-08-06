@@ -14,12 +14,13 @@ class StaticTitle extends Component {
   }
 
   render() {
-    const { UIStore } = this.props;
+    const { UIStore, title } = this.props;
 
     return (
       <header className={styles.staticHeader}>
         <AnimatedTitle
           UIStore={UIStore}
+          title={title}
           isAnimated={false}
         />
       </header>
@@ -29,6 +30,7 @@ class StaticTitle extends Component {
 
 StaticTitle.propTypes = {
   UIStore: PropTypes.object,
+  title: PropTypes.string,
 };
 
 export default StaticTitle;

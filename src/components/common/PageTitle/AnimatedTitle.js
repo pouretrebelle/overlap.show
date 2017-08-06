@@ -112,7 +112,7 @@ class AnimatedTitle extends Component {
   }
 
   render() {
-    const { shapeCount, isAnimated } = this.props;
+    const { shapeCount, isAnimated, title } = this.props;
 
     return (
       <div
@@ -121,7 +121,7 @@ class AnimatedTitle extends Component {
         style={{
           opacity: (shapeCount && isAnimated) ? 0 : 1,
         }}>
-        <TitleText />
+        <TitleText title={title} />
       </div>
     );
   }
@@ -130,6 +130,7 @@ class AnimatedTitle extends Component {
 AnimatedTitle.propTypes = {
   UIStore: PropTypes.object,
   shapeCount: PropTypes.number,
+  title: PropTypes.string,
   isAnimated: PropTypes.bool,
 };
 

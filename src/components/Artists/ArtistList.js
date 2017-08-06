@@ -16,17 +16,17 @@ const ArtistList = ({ artists, currentArtist }) => {
 
     return (
       <li key={i} className={artistClasses}>
-        { artist.data.portrait &&
+        { artist.frontmatter.portrait &&
           <Link
-            to={artist.path}
-            title={artist.data.name}
+            to={artist.fields.slug}
+            title={artist.frontmatter.name}
           >
             <div className={styles.portrait}>
               <ResponsiveImage
-                imagePath={`portraits/${artist.data.portrait}`}
+                imagePath={`portraits/${artist.frontmatter.portrait}`}
                 width={[248, 183, 168]}
                 maxBreakpoint={1176}
-                alt={artist.data.name}
+                alt={artist.frontmatter.name}
               />
             </div>
           </Link>

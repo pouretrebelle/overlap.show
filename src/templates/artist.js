@@ -6,10 +6,10 @@ import StaticTitle from '../components/common/PageTitle/StaticTitle';
 import Artist from '../components/Artists/Artist';
 
 const ArtistPage = ({ data }) => {
-  const page = data.markdownRemark;
+  const artistData = data.markdownRemark;
 
-  const description = page.description || '';
-  const keywords = page.keywords || '';
+  const description = artistData.frontmatter.description || '';
+  const keywords = artistData.frontmatter.keywords || '';
   const meta = [
     {'name': 'description', 'content': description},
     {'name': 'keywords', 'content': keywords },
@@ -19,13 +19,13 @@ const ArtistPage = ({ data }) => {
     <div>
 
       <Helmet
-        title={`${data.site.siteMetadata.title} | ${page.title}`}
+        title={`${data.site.siteMetadata.title} | ${artistData.frontmatter.title}`}
         meta={meta}
       />
 
-      <StaticTitle />
+      <StaticTitle title={data.site.siteMetadata.shortTitle} />
 
-      <Artist page={page} />
+      <Artist data={artistData} />
 
     </div>
   );
@@ -42,13 +42,15 @@ export const pageQuery = graphql`
   query ArtistBySlug($slug: String!) {
     site {
       siteMetadata {
+        shortTitle
         title
       }
     }
     markdownRemark(fields: { slug: { eq: $slug }}) {
       html
       frontmatter {
-        title
+        name
+        portrait
       }
     }
   }

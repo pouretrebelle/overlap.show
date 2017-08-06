@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import graphql from 'graphql';
 import Helmet from 'react-helmet';
 
 import { filterAndSortArtists } from '../utils/contentUtils';

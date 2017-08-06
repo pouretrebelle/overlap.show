@@ -22,7 +22,7 @@ const Home = ({ siteMetadata, artists }) => (
 
 Home.propTypes = {
   siteMetadata: PropTypes.object,
-  artists: PropTypes.object,
+  artists: PropTypes.array,
 };
 
 export default Home;

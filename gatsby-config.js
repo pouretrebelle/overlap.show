@@ -6,4 +6,16 @@ module.exports = {
     keywords: 'Goldsmiths, MA Computational Arts, MACompArts, Overlap Show, creative computing',
     noProductionJavascript: false,
   },
+  plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'pages',
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+    },
+  ],
 };

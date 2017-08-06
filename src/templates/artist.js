@@ -2,14 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { config } from 'config';
-import { getArtistsFromRoute } from '../utils/contentUtils';
 import StaticTitle from '../components/common/PageTitle/StaticTitle';
-import ArtistList from '../components/Artists/ArtistList';
 import Artist from '../components/Artists/Artist';
 
-const Markdown = ({ route }) => {
-  const page = route.page.data;
+const ArtistPage = ({ data }) => {
+  const page = data.markdownRemark;
+
   const description = page.description || '';
   const keywords = page.keywords || '';
   const meta = [
@@ -19,23 +17,39 @@ const Markdown = ({ route }) => {
 
   return (
     <div>
+
       <Helmet
-        title={`${config.siteTitle} | ${page.title}`}
+        title={`${data.site.siteMetadata.title} | ${page.title}`}
         meta={meta}
       />
 
       <StaticTitle />
 
-      <Artist page={route.page} />
-
-      <ArtistList artists={getArtistsFromRoute(route)} currentArtist={route.page}/>
+      <Artist page={page} />
 
     </div>
   );
 };
 
-Markdown.propTypes = {
+ArtistPage.propTypes = {
   route: PropTypes.object,
+  data: PropTypes.object,
 };
 
-export default Markdown;
+export default ArtistPage;
+
+export const pageQuery = graphql`
+  query ArtistBySlug($slug: String!) {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    markdownRemark(fields: { slug: { eq: $slug }}) {
+      html
+      frontmatter {
+        title
+      }
+    }
+  }
+`;

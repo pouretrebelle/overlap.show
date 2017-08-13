@@ -14,7 +14,7 @@ const Template = ({ children }) => (
 );
 
 Template.propTypes = {
-  children: PropTypes.node,
+  children: PropTypes.func,
 };
 
 export default Template;

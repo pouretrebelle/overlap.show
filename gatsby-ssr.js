@@ -1,14 +1,16 @@
 import React from 'react';
 import { Provider, useStaticRendering } from 'mobx-react';
 import UIStore from './src/stores/UIStore';
+import { renderToString } from 'react-dom/server';
 
-exports.wrapRootComponent = (Root) => {
-  const store = new UIStore;
+exports.replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
   useStaticRendering(true);
 
-  return (
-    <Provider UIStore={store}>
-      <Root />
+  const ConnectedBody = () => (
+    <Provider UIStore={UIStore}>
+      {bodyComponent}
     </Provider>
   );
+
+  replaceBodyHTMLString(renderToString(<ConnectedBody/>));
 };

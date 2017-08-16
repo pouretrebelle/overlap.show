@@ -55,4 +55,4 @@ class UIStore {
   onMouseMoved = (e) => this.updateMousePosition(e);
 }
 
-export default UIStore;
+export default new UIStore();

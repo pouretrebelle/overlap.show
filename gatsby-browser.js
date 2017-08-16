@@ -4,11 +4,11 @@ import { Provider } from 'mobx-react';
 import UIStore from './src/stores/UIStore';
 
 exports.replaceRouterComponent = ({ history }) => {
-  const store = new UIStore;
-
   const ConnectedRouterWrapper = ({ children }) => (
-    <Provider UIStore={store}>
-      <Router history={history}>{children}</Router>
+    <Provider UIStore={UIStore}>
+      <Router history={history}>
+        {children}
+      </Router>
     </Provider>
   );
 

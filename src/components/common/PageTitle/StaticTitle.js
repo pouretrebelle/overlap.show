@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 
-import styles from './TitleText.styl';
+import styles from './TitleText.module.styl';
 
 import AnimatedTitle from './AnimatedTitle';
 

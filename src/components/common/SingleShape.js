@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './SingleShape.styl';
+import styles from './SingleShape.module.styl';
 
 import { randomAccentColor } from '../../utils/uiUtils';
 import { randomXPosition } from '../../utils/uiUtils';

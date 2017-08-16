@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './TriangleStack.styl';
+import styles from './TriangleStack.module.styl';
 
 import { randomMinMax, randomZerodInt } from '../../../utils/numberUtils';
 import TriangleOutline from './TriangleOutline';

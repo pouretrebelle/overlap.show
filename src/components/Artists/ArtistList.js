@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Link from 'gatsby-link';
 
-import styles from './ArtistList.styl';
+import styles from './ArtistList.module.styl';
 
 import ResponsiveImage from '../common/images/ResponsiveImage';
 

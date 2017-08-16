@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Artist.styl';
+import styles from './Artist.module.styl';
 
 import ResponsiveImage from '../common/images/ResponsiveImage';
 

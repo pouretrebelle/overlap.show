@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './RectangleOutline.styl';
+import styles from './RectangleOutline.module.styl';
 
 import { randomMinMax } from '../../../utils/numberUtils';
 

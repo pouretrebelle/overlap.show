@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './Footer.styl';
+import styles from './Footer.module.styl';
 
 import { TWITTER_URL, INSTAGRAM_URL, FACEBOOK_URL } from '../../../constants/urls';
 import TwitterIcon from '../icons/TwitterIcon';

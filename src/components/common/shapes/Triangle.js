@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-import styles from './Triangle.styl';
+import styles from './Triangle.module.styl';
 
 import { randomMinMax, randomZerodInt } from '../../../utils/numberUtils';
 

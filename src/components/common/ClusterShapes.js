@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import TweenLite from 'gsap';
 
-import styles from './ClusterShapes.styl';
+import styles from './ClusterShapes.module.styl';
 
 import { randomMinMax } from '../../utils/numberUtils';
 import SingleShape from './SingleShape';

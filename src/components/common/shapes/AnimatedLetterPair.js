@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TweenLite } from 'gsap';
 import classNames from 'classnames';
 
-import styles from './AnimatedLetterPair.styl';
+import styles from './AnimatedLetterPair.module.styl';
 
 import { possibleLetterPairSymbols } from '../../../constants/ui';
 import { randomZerodInt, randomMinMax, getOneOf } from '../../../utils/numberUtils';

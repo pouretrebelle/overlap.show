@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import styles from './TriangleOutline.styl';
+import styles from './TriangleOutline.module.styl';
 
 import { randomMinMax, randomZerodInt } from '../../../utils/numberUtils';
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
-import styles from './LetterString.styl';
+import styles from './LetterString.module.styl';
 
 import { possibleLetterStringSymbols } from '../../../constants/ui';
 import { randomZerodInt, randomMinMax, getOneOf } from '../../../utils/numberUtils';

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './RectangleStack.styl';
+import styles from './RectangleStack.module.styl';
 
 import { randomMinMax, randomZerodInt } from '../../../utils/numberUtils';
 import RectangleOutline from './RectangleOutline';

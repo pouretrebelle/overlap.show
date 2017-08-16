@@ -7,6 +7,7 @@ module.exports = {
     noProductionJavascript: false,
   },
   plugins: [
+    'gatsby-plugin-stylus',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

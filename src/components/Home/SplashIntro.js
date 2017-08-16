@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
-import styles from './SplashIntro.styl';
+import styles from './SplashIntro.module.styl';
 
 import { getOneOf } from '../../utils/numberUtils';
 import AnimatedTitle from '../common/PageTitle/AnimatedTitle';

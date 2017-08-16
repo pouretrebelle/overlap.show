@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './CircleGrid.styl';
+import styles from './CircleGrid.module.styl';
 
 import { randomZerodInt } from '../../../utils/numberUtils';
 

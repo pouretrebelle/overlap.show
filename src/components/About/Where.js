@@ -1,6 +1,6 @@
 import React from 'react';
 
-import styles from './About.styl';
+import styles from './About.module.styl';
 
 import GoogleMapEmbed from './GoogleMapEmbed';
 

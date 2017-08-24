@@ -24,7 +24,7 @@ const ArtistList = ({ artists, currentArtist }) => {
             <div className={styles.portrait}>
               <ResponsiveImage
                 imagePath={`portraits/${artist.frontmatter.portrait}`}
-                width={[248, 183, 168]}
+                width={[154, 183, 168]}
                 maxBreakpoint={1176}
                 alt={artist.frontmatter.name}
               />

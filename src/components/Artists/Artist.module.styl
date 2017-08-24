@@ -39,15 +39,39 @@
   @media site-medium-min
     grid-cell(8, 1)
 
-.bio hr
-  max-width: 100%
-  width: 5rem
-  height: 0.5rem
-  background: color-primary
-  border: 0
-  margin: 2rem 0
-
-.bio hr ~ p
-  font-weight: font-weight-heavy
-  font-size: 18px
-  line-height: 24px
+.bio
+  hr
+    max-width: 100%
+    width: 5rem
+    height: 0.5rem
+    background: color-primary
+    border: 0
+    margin: 2rem 0
+  hr ~ p
+    font-weight: font-weight-heavy
+    font-size: 18px
+    line-height: 24px
+  aside
+    margin-bottom: 1rem
+  h4 + aside
+    position: relative
+    margin-bottom: 0
+    top: -2rem
+  p + h4
+    margin-top: 2rem
+  blockquote
+    position: relative
+    margin: 0
+    &:before
+      content: '\2018'
+      position: absolute
+      top: 0
+      left: -2.5rem
+      line-height: 0.8
+      font-size: 8rem
+      color: color-primary
+    p
+      margin: 0
+    + p
+      margin-top: 0rem
+      font-size: 1rem

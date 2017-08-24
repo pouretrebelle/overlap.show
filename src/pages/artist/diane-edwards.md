@@ -5,7 +5,9 @@ title: Messy Logics
 portrait: diane2.jpg
 ---
 
-“Human bodies swarm with a multitude of putatively alien others” (Shildrick, 2016).
+> Human bodies swarm with a multitude of putatively alien others
+
+(Shildrick, 2016)
 
 We are not alone and have never been throughout our evolutionary becoming. Our fleshy cumbersome forms are Kin[1] to a lively throng of “alien others”—microorganisms—the majority residing in the gut.  We exist through a mutualistic entanglement with our endosymbionts, sharing essential resources and gaining added metabolic abilities.
 
@@ -13,9 +15,7 @@ We arrive at a decentralised non-anthropocentric consideration of the body, wher
 
 Scientists engage in a multitude of material and computational practices to tell stories of living matter.  Creepy artifacts are created as new knowledge makers, elucidating the intangible, allowing for new ways of seeing.  I wish to engage with the practices of Science, unravelling conceptual narratives to arrive at unexpected and surprising points of discovery, where the factual, fictional and fabulated are vital.
 
----
-
-[1] The proposition that we are “kin” to microorganisms in our gut takes reference from Donna Haraway, where the understanding of “kin” that may lie “outside what we thought was family or gens”, to one which hints to human/microbe co-evolution and symbiotic relations where we have come into being or “become-with” these microbes as close collaborators in life (Haraway, 2015).
+<aside>[1] The proposition that we are “kin” to microorganisms in our gut takes reference from Donna Haraway, where the understanding of “kin” that may lie “outside what we thought was family or gens”, to one which hints to human/microbe co-evolution and symbiotic relations where we have come into being or “become-with” these microbes as close collaborators in life (Haraway, 2015).</aside>
 
 ---
 

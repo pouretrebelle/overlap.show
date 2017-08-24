@@ -5,7 +5,7 @@ title: Me|more|y
 portrait: alix.jpg
 ---
 
-Me|more|y. Preparing myself to forget. Exercises to remember.
+<aside>Me|more|y. Preparing myself to forget. Exercises to remember.</aside>
 
 We are our memories. And our feelings, and our plans for the future. Those who are not here anymore, only exist in our memories, and in our hearts. The past only exists through documentation, imagination, recreation, evocation and recollection of impressions. History is the sum of individual and collective memories and their commemoration.
 

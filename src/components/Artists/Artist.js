@@ -11,9 +11,9 @@ const Artist = ({ data }) => (
       <h2 className={styles.name}>
         {data.frontmatter.name}
       </h2>
-      <h3 className={styles.title}>
+      { data.frontmatter.title && <h3 className={styles.title}>
         {data.frontmatter.title}
-      </h3>
+      </h3> }
     </div>
     <div className={styles.portrait}>
       { data.frontmatter.portrait && <ResponsiveImage

@@ -5,7 +5,9 @@ title: Glocky
 portrait: Eleni.jpg
 ---
 
-*Glocky* is an installation which presents various elements gathered from the city of London; these elements are represented as parts of psychographic maps and notes. More specifically, the included elements are related to the “sense” of the city and demonstrate locations, colours, sounds and generally anything that is related to a personal experience of the city by its inhabitants or visitors. This information has been curated from many responses to the distribution of a questionnaire.
+<aside>a synopsis of global and local</aside>
+
+*Glocky* is an installation which presents various elements gathered from the city of London; these elements are represented as parts of psychographic maps and notes. More specifically, the included elements are related to the “sense” of the city and demonstrate locations, colours, sounds and generally anything that is related to a personal experience of the city by its inhabitants or visitors. This information has been curated from responses to the distribution of a questionnaire.
 
 *Glocky* draws direct influence from archival art and the situationist movement. The main objective is to create an interactive space of nonlinear narrations where the audience receives a new interpretation of London through the experience of others. The title of the piece is related to this aggregation. It is a hack of the words glocal/glocalization, and has been used to describe the new state of globalization under locality filters. However, in this piece, the word represents and symbolises an in-between point of the dipole self and Others.
 

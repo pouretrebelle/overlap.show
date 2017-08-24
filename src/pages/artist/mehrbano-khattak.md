@@ -7,8 +7,9 @@ portrait: mehrbano.jpg
 
 *Entanglement* is an interactive floor projection inspired by the following passage:
 
-"Dusk ... is just an illusion, because the sun is either above the horizon or below it. And that means that day and night are linked in a way that few things are; there cannot be one without the other, yet they cannot exist at the same time. How would it feel ... to be always together, yet forever apart?"  
-\- NICHOLAS SPARKS, The Notebook
+> Dusk ... is just an illusion, because the sun is either above the horizon or below it. And that means that day and night are linked in a way that few things are; there cannot be one without the other, yet they cannot exist at the same time. How would it feel ... to be always together, yet forever apart?
+
+NICHOLAS SPARKS, The Notebook
 
 Night and day cannot exist without the other, yet they cannot be together at the same time. This romantic thought was the stimuli for the aspirations of this piece.
 

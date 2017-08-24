@@ -7,18 +7,16 @@ portrait: philip.jpg
 
 *Inaudible/Invisible* is an ongoing series of audiovisual installations.
 
-1\.  
-Dimensions.  
-First installation of the *Inaudible/Invisible* series.
+#### Dimensions
+<aside>First installation of the Inaudible/Invisible series.</aside>
 
 Quantum theory states that matter in the universe consists of a simultaneous duality between particles and waves. Existing at the subatomic level, this duality presents unheard and unseen beauties beyond our human senses.
 
 Dimensions is an audiovisual work using 2D samples translated from the 3D field produced by alpha radiation. Alpha radiation, produced when an unstable atomic nucleus emits a stable alpha particle, forms a certain shape around its emitter. By deploying a set of detectors, the artist is able to recreate this shape into a computer model as a 2D plane. The plane is treated like a percussive metal plate which allows the sound to be synthesized through a technique called physical modelling in the moment that an alpha particle collides with a detector. The sound produced is akin to the sound the shape would make were it a drum struck at the position the particle collides with the shape.
 
 
-2\.  
-6-bit rays  
-Second installation of the *Inaudible/Invisible* series.
+#### 6-bit rays
+<aside>Second installation of the Inaudible/Invisible series.</aside>
 
 Muons are subatomic particles and they everywhere around us, unseen and unheard. 6-bit Rays is an audiovisual installation that detects Muons and other particles using an array of Geiger Counters, represents the particles as sound and light. Each Geiger tube is treated as a binary digit of information, a digital ‘0’ or ‘1’. If no particle is detected it represents a 0 and becomes a 1 if a particle is detected. Using 6 Geiger Counters, a 6-bit file system can be computed.
 

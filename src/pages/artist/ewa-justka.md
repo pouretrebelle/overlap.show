@@ -1,11 +1,11 @@
 ---
 type: artist
 name: Ewa Justka
-title: Kick Studies and Neon bulb synthesiser
 portrait: ewa.jpg
 ---
 
-#### Kick Studies (with technical help from Roc Jimenez de Cisneros)
+#### Kick Studies
+<aside>with technical help from Roc Jimenez de Cisneros</aside>
 
 From tribal rituals of possession, dance ceremonies and spirits music, to gabber raves, drum sounds have been playing an essential role in inducing trance like states, where progressive acceleration of tempos and crescendos would then trigger violent and convulsive dance in participants.
 

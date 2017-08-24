@@ -7,9 +7,14 @@ import ResponsiveImage from '../common/images/ResponsiveImage';
 
 const Artist = ({ data }) => (
   <div className={styles.wrapper}>
-    <h2 className={styles.name}>
-      {data.frontmatter.name}
-    </h2>
+    <div className={styles.titleWrapper}>
+      <h2 className={styles.name}>
+        {data.frontmatter.name}
+      </h2>
+      <h3 className={styles.title}>
+        {data.frontmatter.title}
+      </h3>
+    </div>
     <div className={styles.portrait}>
       { data.frontmatter.portrait && <ResponsiveImage
         imagePath={`portraits/${data.frontmatter.portrait}`}

@@ -13,10 +13,15 @@
   @media site-small-min
     margin-top: 6rem
 
-.name
+.titleWrapper
   grid-cell(12)
+  margin-bottom: 2rem
   @media site-small-min
     grid-cell(8, 4)
+
+.name,
+.title
+  margin-bottom: 0
 
 .portrait
   grid-cell(12)
@@ -33,3 +38,16 @@
     grid-cell(8)
   @media site-medium-min
     grid-cell(8, 1)
+
+.bio hr
+  max-width: 100%
+  width: 5rem
+  height: 0.5rem
+  background: color-primary
+  border: 0
+  margin: 2rem 0
+
+.bio hr ~ p
+  font-weight: font-weight-heavy
+  font-size: 18px
+  line-height: 24px

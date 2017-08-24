@@ -21,6 +21,7 @@ const Artist = ({ data }) => (
         width={[518, 252, 264]}
         maxBreakpoint={1176}
         alt={data.frontmatter.name}
+        className={styles.portraitImage}
       /> }
     </div>
     <div className={styles.bio} dangerouslySetInnerHTML={{ __html: data.html }} />

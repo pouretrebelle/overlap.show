@@ -68,7 +68,7 @@ class AnimatedLetterPair extends Component {
   }
 
   render() {
-    const { sometimesWhite } = this.props;
+    const { index, ...colorProps } = this.props; // eslint-disable-line no-unused-vars
     const wrapperStyle = {
       fontSize: this.fontSize,
     };
@@ -79,7 +79,7 @@ class AnimatedLetterPair extends Component {
 
     return (
       <div ref={element => this.wrapperElement = element}>
-        <SingleShape sometimesWhite={sometimesWhite}>
+        <SingleShape {...colorProps}>
           <div style={wrapperStyle} className={wrapperClasses}>
             <span ref={element => this.firstLetterElement = element} className={styles.letter}>
               {this.firstLetter}
@@ -96,11 +96,6 @@ class AnimatedLetterPair extends Component {
 
 AnimatedLetterPair.propTypes = {
   index: PropTypes.number.isRequired,
-  sometimesWhite: PropTypes.bool,
-};
-
-AnimatedLetterPair.defaultProps = {
-  sometimesWhite: true,
 };
 
 export default AnimatedLetterPair;

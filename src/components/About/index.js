@@ -1,15 +1,24 @@
 import React from 'react';
 
+import styles from './About.module.styl';
+
 import What from './What';
 import When from './When';
 import Where from './Where';
+import BackgroundShapes from '../common/BackgroundShapes';
 
 const About = () => (
-  <div>
+  <BackgroundShapes
+    shapeCount={30}
+    shapesWrapperClass={styles.backgroundShapes}
+    useWhite={false}
+    usePrimary={false}
+    useSecondary={true}
+  >
     <What />
     <When />
     <Where />
-  </div>
+  </BackgroundShapes>
 );
 
 export default About;

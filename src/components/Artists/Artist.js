@@ -21,6 +21,9 @@ class Artist extends Component {
       <BackgroundShapes
         shapeCount={UIStore.windowWidth * 0.02}
         shapesWrapperClass={styles.backgroundShapes}
+        useWhite={false}
+        usePrimary={true}
+        useSecondary={true}
       >
         <div className={styles.wrapper}>
           <div className={styles.titleWrapper}>

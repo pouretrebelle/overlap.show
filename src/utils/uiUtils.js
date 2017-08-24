@@ -1,11 +1,13 @@
 import { ACCENT_COLORS } from '../constants/ui';
 import { randomMax } from './numberUtils';
 
-export const randomAccentColor = (sometimesWhite) => {
-  let color = ACCENT_COLORS[Math.floor(Math.random()*ACCENT_COLORS.length)];
-  if (sometimesWhite && Math.random() < 0.2) color = '#FFFFFF';
+export const randomAccentColor = (white = false, primary = true, secondary = false) => {
+  const possColors = [];
+  if (white) possColors.push('#FFFFFF');
+  if (primary) possColors.push(ACCENT_COLORS[0], ACCENT_COLORS[0]);
+  if (secondary) possColors.push(ACCENT_COLORS[1], ACCENT_COLORS[1]);
 
-  return color;
+  return possColors[Math.floor(Math.random()*possColors.length)];
 };
 
 export const randomXPosition = () => (

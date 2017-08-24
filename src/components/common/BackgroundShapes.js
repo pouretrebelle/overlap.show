@@ -11,10 +11,19 @@ const BackgroundShapes = ({
   children,
   shapeCount,
   shapesWrapperClass,
+  useWhite,
+  usePrimary,
+  useSecondary,
 }) => {
 
   const pairs = Array.from({ length: shapeCount }, (v, k) => (
-    <AnimatedLetterPair sometimesWhite={false} index={k} key={k} />
+    <AnimatedLetterPair
+      useWhite={useWhite}
+      usePrimary={usePrimary}
+      useSecondary={useSecondary}
+      index={k}
+      key={k}
+    />
   ));
 
   const shapesWrapperClasses = classNames({
@@ -40,6 +49,9 @@ BackgroundShapes.propTypes = {
   children: PropTypes.node,
   shapeCount: PropTypes.number.isRequired,
   shapesWrapperClass: PropTypes.string,
+  useWhite: PropTypes.bool,
+  usePrimary: PropTypes.bool,
+  useSecondary: PropTypes.bool,
 };
 
 export default BackgroundShapes;

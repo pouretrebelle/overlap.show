@@ -5,6 +5,17 @@
 @require '../../styles/mixins/layout'
 @require '../../styles/mixins/typography'
 
+.backgroundShapes
+  display: none
+  left: 0
+  top: 0
+  height: 100%
+  @media site-small-min
+    display: block
+    width: 24%
+  @media site-medium-min
+    width: 45%
+
 .wrapper
   grid()
   align-items: flex-start

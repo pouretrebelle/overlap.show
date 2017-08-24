@@ -2,21 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import SplashIntro from './SplashIntro';
-import What from '../About/What';
-import When from '../About/When';
-import Where from '../About/Where';
+import About from '../About';
 import ArtistList from '../Artists/ArtistList';
 
 const Home = ({ siteMetadata, artists }) => (
   <div>
-
     <SplashIntro title={siteMetadata.shortTitle} />
-
-    <What />
-    <When />
-    <Where />
+    <About />
     <ArtistList artists={artists} />
-
   </div>
 );
 

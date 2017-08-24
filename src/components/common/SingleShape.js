@@ -11,13 +11,25 @@ class SingleShape extends Component {
 
   constructor(props) {
     super(props);
-    this.color = randomAccentColor(this.props.sometimesWhite);
+    this.color = randomAccentColor(
+      props.useWhite,
+      props.usePrimary,
+      props.useSecondary,
+    );
     this.positionX = (this.props.x !== undefined) ? this.props.x : randomXPosition();
     this.positionY = (this.props.y !== undefined) ? this.props.y : randomYPosition();
   }
 
   render() {
-    const { children, zIndex, sometimesWhite, style, ...props } = this.props; // eslint-disable-line no-unused-vars
+    const {
+      children,
+      zIndex,
+      style,
+      useWhite, // eslint-disable-line no-unused-vars
+      usePrimary, // eslint-disable-line no-unused-vars
+      useSecondary, // eslint-disable-line no-unused-vars
+      ...props
+    } = this.props;
 
     const mergedStyle = Object.assign((style || {}), {
       color: this.color,
@@ -37,7 +49,9 @@ class SingleShape extends Component {
 SingleShape.propTypes = {
   children: PropTypes.node.isRequired,
   zIndex: PropTypes.number,
-  sometimesWhite: PropTypes.bool,
+  useWhite: PropTypes.bool,
+  usePrimary: PropTypes.bool,
+  useSecondary: PropTypes.bool,
   style: PropTypes.object,
   x: PropTypes.oneOfType([
     PropTypes.number,
@@ -50,7 +64,9 @@ SingleShape.propTypes = {
 };
 
 SingleShape.defaultProps = {
-  sometimesWhite: false,
+  useWhite: true,
+  usePrimary: true,
+  useSecondary: true,
 };
 
 export default SingleShape;

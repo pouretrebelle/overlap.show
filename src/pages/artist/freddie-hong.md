@@ -1,7 +1,18 @@
 ---
 type: artist
 name: Freddie Hong
+title: Surface
 portrait: freddie.jpg
+---
+
+*Surface* is a machine that like other CNC devices, such as routers and 3d printers, allows the users to construct different geometries. However, differing from already existing CNC devices *Surface* is run by your intuition rather than pre-drawn digital geometries, challenging the ambiguous boundary between analog and digital.
+
+With *Surface*, users can produce different geometries using various controllers. *Surface* uses hot wire and styrofoam blocks to construct the shape in a subtractive method. Users can witness and make alterations to their shape as the cutting happens, and unlike other conventional digital fabrication, what has been cut cannot be repeated perfectly. Only through mastering the technique can the user repetitively produce accurate modelings.
+
+As the cutting happens, the computer records the commands/motions of the user and produces notations that appear similar to musical scores. By studying the notation, users can attempt to create the same geometry or even improve the shape.
+
+This work aims to introduce people to the joy of making shapes in a manner that does not require the users to have skills or even understand digital modelling.
+
 ---
 
 Freddie is an architecture and programming student based in London.

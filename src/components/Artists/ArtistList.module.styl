@@ -3,6 +3,12 @@
 @require '../../styles/variables/typography'
 @require '../../styles/mixins/grid'
 
+.backgroundShapes
+  left: 0
+  top: 0
+  height: 100%
+  width: 100%
+
 .artistList
   grid()
   list-style: none
@@ -21,6 +27,8 @@
     margin-bottom: 24px
   @media site-medium-min
     grid-cell(2)
+    &:nth-child(7n)
+      grid-cell(2, 0, 2)
 
 .currentArtist
   background-color: color-primary

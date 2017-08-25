@@ -5,6 +5,7 @@ import Link from 'gatsby-link';
 
 import styles from './ArtistList.module.styl';
 
+import BackgroundShapes from '../common/BackgroundShapes';
 import ResponsiveImage from '../common/images/ResponsiveImage';
 
 const ArtistList = ({ artists, currentArtist }) => {
@@ -36,9 +37,18 @@ const ArtistList = ({ artists, currentArtist }) => {
   });
 
   return (
-    <ul className={styles.artistList}>
-      {artistList}
-    </ul>
+    <BackgroundShapes
+      shapeCount={15}
+      shapesWrapperClass={styles.backgroundShapes}
+      useWhite={false}
+      usePrimary={!currentArtist}
+      useSecondary={!!currentArtist}
+      useLetters={false}
+    >
+      <ul className={styles.artistList}>
+        {artistList}
+      </ul>
+    </BackgroundShapes>
   );
 };
 

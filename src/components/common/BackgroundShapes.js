@@ -1,49 +1,89 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
 
 import styles from './BackgroundShapes.module.styl';
 
+import { getOneOf } from '../../utils/numberUtils';
 import AnimatedLetterPair from '../common/shapes/AnimatedLetterPair';
+import SingleShape from '../common/SingleShape';
+import Rectangle from '../common/shapes/Rectangle';
+import Triangle from '../common/shapes/Triangle';
 
-const BackgroundShapes = ({
-  children,
-  shapeCount,
-  shapesWrapperClass,
-  useWhite,
-  usePrimary,
-  useSecondary,
-}) => {
+class BackgroundShapes extends Component {
+  constructor(props) {
+    super(props);
 
-  const pairs = Array.from({ length: shapeCount }, (v, k) => (
-    <AnimatedLetterPair
-      useWhite={useWhite}
-      usePrimary={usePrimary}
-      useSecondary={useSecondary}
-      index={k}
-      key={k}
-    />
-  ));
+    this.availableShapes = [
+      Rectangle,
+      Triangle,
+    ];
+  }
 
-  const shapesWrapperClasses = classNames({
-    [styles.shapesWrapper]: true,
-    [shapesWrapperClass]: !!shapesWrapperClass,
-  });
+  getRandomShape = (i) => {
+    const Shape = getOneOf(this.availableShapes);
+    const {
+      useWhite,
+      usePrimary,
+      useSecondary,
+    } = this.props;
 
-  return (
-    <div className={styles.wrapper}>
-      <div className={shapesWrapperClasses}>
+    return (
+      <SingleShape
+        useWhite={useWhite}
+        usePrimary={usePrimary}
+        useSecondary={useSecondary}
+        key={i}
+      >
+        <Shape />
+      </SingleShape>
+    );
+  }
 
-        <TransitionGroup>
-          {pairs}
-        </TransitionGroup>
+  render() {
+    const {
+      children,
+      shapeCount,
+      shapesWrapperClass,
+      useWhite,
+      usePrimary,
+      useSecondary,
+      useLetters,
+    } = this.props;
 
+    const pairs = useLetters ?
+      Array.from({ length: shapeCount }, (v, k) => (
+        <AnimatedLetterPair
+          useWhite={useWhite}
+          usePrimary={usePrimary}
+          useSecondary={useSecondary}
+          index={k}
+          key={k}
+        />
+      ))
+      :
+      Array.from({ length: shapeCount }, (v, k) => this.getRandomShape(k));
+
+    const shapesWrapperClasses = classNames({
+      [styles.shapesWrapper]: true,
+      [shapesWrapperClass]: !!shapesWrapperClass,
+    });
+
+    return (
+      <div className={styles.wrapper}>
+        <div className={shapesWrapperClasses}>
+
+          <TransitionGroup>
+            {pairs}
+          </TransitionGroup>
+
+        </div>
+        {children}
       </div>
-      {children}
-    </div>
-  );
-};
+    );
+  }
+}
 
 BackgroundShapes.propTypes = {
   children: PropTypes.node,
@@ -52,6 +92,7 @@ BackgroundShapes.propTypes = {
   useWhite: PropTypes.bool,
   usePrimary: PropTypes.bool,
   useSecondary: PropTypes.bool,
+  useLetters: PropTypes.bool,
 };
 
 export default BackgroundShapes;

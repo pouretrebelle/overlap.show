@@ -14,6 +14,7 @@ const About = () => (
     useWhite={false}
     usePrimary={false}
     useSecondary={true}
+    useLetters={true}
   >
     <What />
     <When />

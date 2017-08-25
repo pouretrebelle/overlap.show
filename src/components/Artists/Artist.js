@@ -24,6 +24,7 @@ class Artist extends Component {
         useWhite={false}
         usePrimary={true}
         useSecondary={true}
+        useLetters={true}
       >
         <div className={styles.wrapper}>
           <div className={styles.titleWrapper}>

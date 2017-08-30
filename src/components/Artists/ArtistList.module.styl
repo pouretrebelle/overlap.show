@@ -27,7 +27,24 @@
     margin-bottom: 24px
   @media site-medium-min
     grid-cell(2)
-    &:nth-child(7n)
+    &:nth-child(10),
+    &:nth-child(22)
+      grid-cell(2, 2, 0)
+    &:nth-child(1),
+    &:nth-child(4),
+    &:nth-child(8),
+    &:nth-child(12),
+    &:nth-child(13),
+    &:nth-child(16),
+    &:nth-child(20),
+    &:nth-child(24),
+    &:nth-child(25)
+      grid-cell(2, 4, 0)
+    &:nth-child(2),
+    &:nth-child(14)
+      grid-cell(2, 0, 4)
+    &:nth-child(17),
+    &:nth-child(5)
       grid-cell(2, 0, 2)
 
 .currentArtist

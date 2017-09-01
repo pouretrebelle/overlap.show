@@ -1,11 +1,11 @@
 ---
 type: artist
 name: Natthakit Kangsadansenanon
-title: Pixel Garland
+title: Pixel Blast
 portrait: natthakit.jpg
 ---
 
-*Pixel Garland* is an interactive installation made up of nine 'Persistence of Vision' displays which come together to create hologram-like images. Persistence of vision works because the human eye and brain can only process 10 to 12 separate images per second. This phenomenon make this spinning LED project possible. This project challenges the idea of what a screen has to be, presenting something far more rich than a computer display. By spinning a single long strip of lights around its centre the illusion of pixels appear along the arc of rotation. This is both mesmerising and exciting, as a new form appears - that of a digital canvas.
+*Pixel Blast* is an interactive installation made up of nine 'Persistence of Vision' displays which come together to create hologram-like images. Persistence of vision works because the human eye and brain can only process 10 to 12 separate images per second. This phenomenon make this spinning LED project possible. This project challenges the idea of what a screen has to be, presenting something far more rich than a computer display. By spinning a single long strip of lights around its centre the illusion of pixels appear along the arc of rotation. This is both mesmerising and exciting, as a new form appears - that of a digital canvas.
 
 The artist tracks the audience's movement using a Microsoft Kinect. This human awareness contextualises the visual image, linking it back to the viewer. The unison of all nine units working together brings a harmony to this larger system, enveloping each individual unit and it own unique characteristics. This project seeks to explore forms beyond the traditional screen through this collective output. By then feeding back the real world, the artist gives us a glimpse of a bold visual reflection and of a possible future.
 

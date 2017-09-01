@@ -3,6 +3,7 @@ type: artist
 name: Saskia Freeke
 title: SCROLLLLLL
 portrait: saskia2.jpg
+overlap: freddie-hong
 ---
 
 *SCROLLLLLL* is a playful and tangible interactive installation that reflects on our daily interactions with technology. We engage with technology everyday, scrolling up and down through images and text on social media channels, using the same gestures over and over. These gestures are embedded in our daily lives and have become almost unconscious, and we rarely think about what they are or what they mean. *SCROLLLLLL* makes these interactions playful. The artworks draw on research that shows that when we play as an approach to experience the world, we are more open to exploring. We explore through engaging with technology. When we explore, we play.

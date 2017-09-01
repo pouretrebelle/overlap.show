@@ -3,9 +3,10 @@ type: artist
 name: Yeoul Son
 title: The Tree Seeking Homeostasis
 portrait: yeoul.jpg
+overlap: miduo-gao
 ---
 
-*The Tree Seeking Homeostasis* is a work that creates its shape by processing data, adjusting the value of each dataset according to maintain a state of balance. Bringing together the mathematics of the Golden Mean with eastern philosophy and the virtue of the middle way, the work explores the scientific principle of homeostasis.
+*The Tree Seeking Homeostasis* is a work that creates its shape by processing data, adjusting the value of each dataset accordingly to maintain a state of balance. Bringing together the mathematics of the golden ratio with eastern philosophy and the virtue of the middle way, the work explores the scientific principle of homeostasis.
 
 The installation collects water tanks and screens to depicting a series of living trees each shaped according to a unique genetic code formed by incoming real-time API data. A school of fish help to keep the tree’s homeostasis in such a way that the branches are not weighted toward one direction.
 

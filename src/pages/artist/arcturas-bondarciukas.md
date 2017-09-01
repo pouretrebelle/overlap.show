@@ -3,6 +3,7 @@ type: artist
 name: Arturas Bondarciukas
 title: Movement flow dynamics
 portrait: arturas.jpg
+overlap: amy-cartwright
 ---
 
 With the recent proliferation of machine learning algorithms, there have been increasing attempts to analyse human movement using computational models, creating tools in visualising motion and even building generative systems that could output choreographed dances learned from observation. But these have been mainly aimed at professional dancers and choreographers, requiring computer scientists to build specialised tools from scratch. In these solution-focused endeavours, a playful exploration of motion and digital interaction is limited.

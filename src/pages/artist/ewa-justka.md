@@ -2,6 +2,7 @@
 type: artist
 name: Ewa Justka
 portrait: ewa.jpg
+overlap: friendred
 ---
 
 #### Kick Studies

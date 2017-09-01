@@ -3,6 +3,7 @@ type: artist
 name: Nadia Rahat
 title: What You See - What I Am
 portrait: nadia.jpg
+overlap: georgios-greekalogerakis
 ---
 
 *What You See - What I Am* represents a struggle to live and deal with a deformed identity.

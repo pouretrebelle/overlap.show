@@ -3,6 +3,7 @@ type: artist
 name: Diane Edwards
 title: Messy Logics
 portrait: diane2.jpg
+overlap: yeoul-son
 ---
 
 > Human bodies swarm with a multitude of putatively alien others

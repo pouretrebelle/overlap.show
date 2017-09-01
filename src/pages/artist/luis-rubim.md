@@ -3,6 +3,7 @@ type: artist
 name: Luis Rubim
 title: CH4RL13
 portrait: luis.jpg
+overlap: natthakit-kansadansenanon
 ---
 
 *CH4RL13* is a play on play, mimicry and transhumanism, reflecting our dependency on technology as well as technology's role in de-personalising the user.

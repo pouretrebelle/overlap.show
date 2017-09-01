@@ -3,6 +3,7 @@ type: artist
 name: Andrew Thompson
 title: Blocs
 portrait: andy.jpg
+overlap: luis-rubim
 ---
 
 *Blocs* is a playful, digital music interface intended for single users or small groups. Placing blocks in an 8x8 grid, users interact with a number of digital agents. Agents move independently but react to the world users create for them, bumping into blocks and making notes. Thus a dialogue between user and agent begins as the user assumes the role of pseudo-conductor, attempting to guide the agents and crafting a piece of music while also responding to the agents movements.

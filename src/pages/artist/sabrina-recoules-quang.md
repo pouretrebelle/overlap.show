@@ -3,6 +3,7 @@ type: artist
 name: Sabrina Recoules-Quang
 title: Look at the Other
 portrait: sabrina.jpg
+overlap: nadia-rahat
 ---
 
 You look at me looking at you looking at us.

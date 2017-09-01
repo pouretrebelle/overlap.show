@@ -3,6 +3,7 @@ type: artist
 name: Julianne Rahimi
 title: Cyber-Selves Searching for Love
 portrait: jules2.jpg
+overlap: howard-melnyczuk
 ---
 
 *Cyber-Selves Searching for Love* is a visual and audio installation that explores the “cyber-self” through the conversations of online daters. The “cyber-self” is a version of our persona that lives and exists only in cyberspace, or online. It is one of the many versions of our persona that each individual embodies, or is what the artist, Julianne Rahimi, refers to as, the “multiple-selves.”

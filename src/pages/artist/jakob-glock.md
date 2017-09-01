@@ -3,6 +3,7 @@ type: artist
 name: Jakob Glock
 title: Evolve and Mutate
 portrait: jakob.jpg
+overlap: diane-edwards
 ---
 
 Exploring the use and possibilities of generative systems to create visual artworks, this piece uses genetic algorithms, which are left to evolve and mutate autonomously in an attempt to discover new visual artefacts.

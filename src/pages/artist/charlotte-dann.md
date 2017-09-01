@@ -3,6 +3,7 @@ type: artist
 name: Charlotte Dann
 title: Hexatope
 portrait: charlotte2.jpg
+overlap: jayson-haebich
 ---
 
 *Hexatope* is a design system based on a hexagonal grid. With a simple interface and intuitive set of rules it enables users to design beautiful, complex and unique forms without prior experience. Using touch or mouse input, users draw undulating curves which diverge and overlap one another with seemingly organic grace.

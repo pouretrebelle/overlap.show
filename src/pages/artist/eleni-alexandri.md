@@ -3,6 +3,7 @@ type: artist
 name: Eleni Alexandri
 title: Glocky
 portrait: Eleni.jpg
+overlap: andrew-thompson
 ---
 
 <aside>a synopsis of global and local</aside>

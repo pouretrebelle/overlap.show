@@ -3,6 +3,7 @@ type: artist
 name: Howard Melnyczuk
 title: Rrosetta
 portrait: howard.jpg
+overlap: laura-dekker
 ---
 
 When Walter Benjamin undertook his analysis of mechanical reproduction, that mode was in its infancy. Today, rapidly proliferating implementations of artificial intelligence and data analytics are forming a pincer of automation that is drastically altering the fabric of our culture. The focus has shifted: human users increasingly produce data, rather than meaning. Intelligent Big Data systems now have the agency to determine what is seen, read, heard and felt.

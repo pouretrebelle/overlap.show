@@ -3,6 +3,7 @@ type: artist
 name: Laura Dekker
 title: Salty Bitter Sweet
 portrait: laura.jpg
+overlap: jakob-glock
 ---
 
 The Machine has made itself, quietly, unnoticed, in a back room.  From partially broken and discarded components.  Now it tries to explore and understand the world in which it finds itself.  It tastes what it sees - abandoned pieces of junk, rotting matter.  In response, tentatively, it begins to express itself, in machinic love poetry and soundscape.

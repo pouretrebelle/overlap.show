@@ -3,6 +3,7 @@ type: artist
 name: Thalia Agroti
 title: Platinwald
 portrait: thalia.jpg
+overlap: ewa-justka
 ---
 
 *Platinwald* is about being lost - about not knowing where one belongs in both a topological and existential sense. The struggle of simply being human can often become overwhelming, either from the forces of external situations or from the pressures of societal structures. The work endeavours to promote an alternative to the escapism most often achieved within virtual systems. Instead, through an immersive and playful environment, the work grounds its audience within a physical existing reality.

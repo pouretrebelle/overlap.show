@@ -3,6 +3,7 @@ type: artist
 name: Alix Martínez Martínez
 title: Me|more|y
 portrait: alix.jpg
+overlap: julianne-rahimi
 ---
 
 <aside>Me|more|y. Preparing myself to forget. Exercises to remember.</aside>

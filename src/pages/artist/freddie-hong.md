@@ -3,6 +3,7 @@ type: artist
 name: Freddie Hong
 title: Surface
 portrait: freddie.jpg
+overlap: charlotte-dann
 ---
 
 *Surface* is a machine that like other CNC devices, such as routers and 3d printers, allows the users to construct different geometries. However, differing from already existing CNC devices *Surface* is run by your intuition rather than pre-drawn digital geometries, challenging the ambiguous boundary between analog and digital.

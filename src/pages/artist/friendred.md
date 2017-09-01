@@ -3,6 +3,7 @@ type: artist
 name: Friendred
 title: Baptism
 portrait: youhong.jpg
+overlap: mehrbano-khattak
 ---
 
 *Baptism* is a performance that explores shamanic practices of rituals, divination and healing. It shows a digital interpretation of the shamanic process of contacting a spiritual world while in an altered state of consciousness. Staged in a spiritual dimension and with a focus on the practice of exorcism, *Baptism* represents three different stages of the Shaman’s journey through ecstasy/trance, travelling and healing.

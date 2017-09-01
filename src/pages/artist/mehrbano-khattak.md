@@ -3,6 +3,7 @@ type: artist
 name: Mehrbano Khattak
 title: Entanglement
 portrait: mehrbano.jpg
+overlap: arturas-bondarciukas
 ---
 
 *Entanglement* is an interactive floor projection inspired by the following passage:

@@ -3,6 +3,7 @@ type: artist
 name: Amy Cartwright
 title: Dancers in White, Standing
 portrait: amy.jpg
+overlap: sabrina-recoules-quang
 ---
 
 Bringing a set of three non-anthropomorphic autonoma together with a human dancer, *Dancers in White, Standin*g focuses on the bold new forms of creativity and physical performance that result when art embraces computation and robotics. The otherness of such foreign bodies engaging with one another through dance presents a unique relationship that gives the improvised performance a truly genuine air of exploration. The work takes a firm and practical step toward a new intersection between dance performance and Artificial Intelligence.

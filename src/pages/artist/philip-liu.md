@@ -3,6 +3,7 @@ type: artist
 name: Philip Liu
 title: Inaudible/Invisible
 portrait: philip.jpg
+overlap: thalia-agroti
 ---
 
 *Inaudible/Invisible* is an ongoing series of audiovisual installations.

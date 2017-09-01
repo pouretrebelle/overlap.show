@@ -3,6 +3,7 @@ type: artist
 name: Miduo Gao
 title: What the Tree Sees
 portrait: miduo.jpg
+overlap: eleni-alexandri
 ---
 
 This piece explores how human activities have changed the balance of the world. With Global Warming as a focus *What the Tree Sees* emphasises and challenges the anthropocene.

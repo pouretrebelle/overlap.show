@@ -3,6 +3,7 @@ type: artist
 name: Natthakit Kangsadansenanon
 title: Pixel Blast
 portrait: natthakit.jpg
+overlap: saskia-freeke
 ---
 
 *Pixel Blast* is an interactive installation made up of nine 'Persistence of Vision' displays which come together to create hologram-like images. Persistence of vision works because the human eye and brain can only process 10 to 12 separate images per second. This phenomenon make this spinning LED project possible. This project challenges the idea of what a screen has to be, presenting something far more rich than a computer display. By spinning a single long strip of lights around its centre the illusion of pixels appear along the arc of rotation. This is both mesmerising and exciting, as a new form appears - that of a digital canvas.

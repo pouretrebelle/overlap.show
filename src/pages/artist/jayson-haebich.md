@@ -3,6 +3,7 @@ type: artist
 name: Jayson Haebich
 title: Data Crystallisation
 portrait: jayson.jpg
+overlap: philip-liu
 ---
 
 Inspired by *J G Ballard's* book "The Crystal World" this piece presents artefacts from a speculative future in which data and information have become so dense that it has begun a process of Crystallisation. This process of quantification and digitisation of information is leading to a future in which our every word, action and thought generate endless amounts of data and metadata. In the same way that Ballard's book describes crystals taking over a remote corner of the jungle, I am discussing a possible future in which crystals have crossed the digital/physical divide and emerged from data centres, hard drives, routers and other data rich media. These crystalline forms create their own new forms of information generated through the algorithmic, emergent behaviour of crystal growth.

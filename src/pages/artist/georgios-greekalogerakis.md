@@ -3,6 +3,7 @@ type: artist
 name: Georgios GreeKalogerakis
 title: Could be me, could be you!
 portrait: georgios.jpg
+overlap: alix-martinez-martinez
 ---
 
 Antisemitism is again on the rise in Europe, almost a Century after Auschwitz. Modern Antisemitism is still expressed as prejudice, suspicion and violence.

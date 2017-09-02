@@ -46,17 +46,17 @@ class Artist extends Component {
             /> }
           </div>
           <div className={styles.bio} dangerouslySetInnerHTML={{ __html: data.html }} />
-          <div className={styles.overlapTitle}>
+          { overlapArtist && <div className={styles.overlapTitle}>
             overlaps with
-          </div>
-          <div className={styles.overlapArtist}>
+          </div> }
+          { overlapArtist && <div className={styles.overlapArtist}>
             <Link to={overlapArtist.fields.slug}>
               { overlapArtist.frontmatter.title &&
                 <span>{overlapArtist.frontmatter.title} &mdash; </span>
               }
               {overlapArtist.frontmatter.name}
             </Link>
-          </div>
+          </div> }
         </div>
       </BackgroundShapes>
     );
@@ -65,7 +65,7 @@ class Artist extends Component {
 
 Artist.propTypes = {
   data: PropTypes.object.isRequired,
-  overlapArtist: PropTypes.object.isRequired,
+  overlapArtist: PropTypes.object,
   UIStore: PropTypes.object,
 };
 

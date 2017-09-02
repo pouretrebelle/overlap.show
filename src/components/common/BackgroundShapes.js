@@ -8,16 +8,22 @@ import styles from './BackgroundShapes.module.styl';
 import { getOneOf } from '../../utils/numberUtils';
 import AnimatedLetterPair from '../common/shapes/AnimatedLetterPair';
 import SingleShape from '../common/SingleShape';
-import Rectangle from '../common/shapes/Rectangle';
-import Triangle from '../common/shapes/Triangle';
+import RectangleDiagStack from '../common/shapes/RectangleDiagStack';
+import RectangleOutline from '../common/shapes/RectangleOutline';
+import RectangleStack from '../common/shapes/RectangleStack';
+import TriangleOutline from '../common/shapes/TriangleOutline';
+import TriangleStack from '../common/shapes/TriangleStack';
 
 class BackgroundShapes extends Component {
   constructor(props) {
     super(props);
 
     this.availableShapes = [
-      Rectangle,
-      Triangle,
+      RectangleDiagStack,
+      RectangleOutline,
+      RectangleStack,
+      TriangleOutline,
+      TriangleStack,
     ];
   }
 

@@ -13,3 +13,12 @@ export const filterAndSortArtists = (edges) => (
     return 0;
   })
 );
+
+export const getOverlapArtist = ( allArtists, overlapSlug ) => {
+  const artist = allArtists.filter(artist => (
+    artist.node.fields.slug.indexOf(overlapSlug) !== -1
+  ));
+  if (artist[0]) return artist[0].node;
+
+  return null;
+};

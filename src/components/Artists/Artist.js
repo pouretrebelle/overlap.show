@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { observer, inject } from 'mobx-react';
+import Link from 'gatsby-link';
 
 import styles from './Artist.module.styl';
 
@@ -15,7 +16,7 @@ class Artist extends Component {
   }
 
   render() {
-    const { data, UIStore } = this.props;
+    const { data, overlapArtist, UIStore } = this.props;
 
     return (
       <BackgroundShapes
@@ -45,6 +46,17 @@ class Artist extends Component {
             /> }
           </div>
           <div className={styles.bio} dangerouslySetInnerHTML={{ __html: data.html }} />
+          <div className={styles.overlapTitle}>
+            overlaps with
+          </div>
+          <div className={styles.overlapArtist}>
+            <Link to={overlapArtist.fields.slug}>
+              { overlapArtist.frontmatter.title &&
+                <span>{overlapArtist.frontmatter.title} &mdash; </span>
+              }
+              {overlapArtist.frontmatter.name}
+            </Link>
+          </div>
         </div>
       </BackgroundShapes>
     );
@@ -53,6 +65,7 @@ class Artist extends Component {
 
 Artist.propTypes = {
   data: PropTypes.object.isRequired,
+  overlapArtist: PropTypes.object.isRequired,
   UIStore: PropTypes.object,
 };
 

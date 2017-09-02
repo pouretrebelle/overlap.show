@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import graphql from 'graphql';
 import Helmet from 'react-helmet';
 
-import { filterAndSortArtists } from '../utils/contentUtils';
+import { filterAndSortArtists, getOverlapArtist } from '../utils/contentUtils';
 
 import StaticTitle from '../components/common/PageTitle/StaticTitle';
 import Artist from '../components/Artists/Artist';
@@ -29,7 +29,7 @@ const ArtistPage = ({ data }) => {
 
       <StaticTitle title={data.site.siteMetadata.shortTitle} />
 
-      <Artist data={artistData} />
+      <Artist data={artistData} overlapArtist={getOverlapArtist(data.allMarkdownRemark.edges, artistData.frontmatter.overlap)} />
 
       <ArtistList artists={filterAndSortArtists(data.allMarkdownRemark.edges)} currentArtist={artistData} />
 
@@ -58,6 +58,7 @@ export const pageQuery = graphql`
         name
         title
         portrait
+        overlap
       }
     }
     allMarkdownRemark {
@@ -69,6 +70,7 @@ export const pageQuery = graphql`
           frontmatter {
             type
             name
+            title
             portrait
           }
         }

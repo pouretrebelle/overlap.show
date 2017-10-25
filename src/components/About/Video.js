@@ -5,7 +5,7 @@ const Video = () => (
   <div className={styles.videoWrapper}>
     <div className={styles.video}>
       <div className={styles.fitVids}>
-        <iframe width='560' height='315' src='https://www.youtube.com/embed/pPa2slAh93k?rel=0&amp;showinfo=0' frameBorder='0' allowFullScreen />
+        <iframe src='https://player.vimeo.com/video/239667082?color=E5162E&title=0&byline=0&portrait=0' width='600' height='338' frameBorder='0' allowFullScreen />
       </div>
     </div>
   </div>
